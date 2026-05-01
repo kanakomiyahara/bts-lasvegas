@@ -1,0 +1,2855 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BTS LAS VEGAS TOUR 2026 💜 しおり</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --lavender: #c9b8e8;
+    --lavender-light: #e8dff7;
+    --lavender-pale: #f5f0ff;
+    --purple: #9b72cf;
+    --purple-dark: #6b4fa0;
+    --purple-deep: #4a2d7a;
+    --gold: #d4af6a;
+    --gold-light: #f0d88a;
+    --white: #fefcff;
+    --text-dark: #2d1f4a;
+    --text-mid: #5a4570;
+    --text-light: #9b8ab0;
+    --bg: #f9f5ff;
+    --card: #ffffff;
+    --border: #e0d4f5;
+    --shadow: 0 4px 24px rgba(155,114,207,0.12);
+    --shadow-hover: 0 8px 40px rgba(155,114,207,0.22);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--bg);
+    color: var(--text-dark);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ───────────── NAVIGATION ───────────── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background: rgba(255,252,255,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 6px 1rem;
+  }
+
+  .nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .nav-logo { display: none; }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    list-style: none;
+    justify-content: center;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 5px 10px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--text-mid);
+    text-decoration: none;
+    border-radius: 20px;
+    white-space: nowrap;
+    transition: all 0.2s;
+    letter-spacing: 0.02em;
+  }
+
+  .nav-links a:hover, .nav-links a.active {
+    background: var(--lavender-light);
+    color: var(--purple-dark);
+  }
+
+  /* ───────────── HERO ───────────── */
+  .hero {
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    padding: 100px 2rem 2rem;
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-bg-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    z-index: 0;
+  }
+
+  .hero-bg-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(60,30,90,0.72) 0%,
+      rgba(80,40,110,0.55) 20%,
+      rgba(80,40,110,0.25) 38%,
+      rgba(40,20,60,0.05) 55%,
+      rgba(0,0,0,0.00) 65%
+    );
+    z-index: 1;
+  }
+
+  .hero > *:not(.hero-bg-img):not(.hero-bg-overlay):not(.hero-decorations) {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-decorations {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .hero-circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.08;
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .hero-circle:nth-child(1) {
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, var(--purple) 0%, transparent 70%);
+    top: -100px; right: -100px;
+  }
+  .hero-circle:nth-child(2) {
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, var(--lavender) 0%, transparent 70%);
+    bottom: -50px; left: -50px;
+    animation-delay: -3s;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+
+  .bts-emblem {
+    width: 70px; height: 70px;
+    margin: 0 auto 1rem;
+    position: relative;
+  }
+
+  .bts-emblem svg {
+    width: 100%; height: 100%;
+    filter: drop-shadow(0 4px 12px rgba(155,114,207,0.4));
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { filter: drop-shadow(0 4px 12px rgba(155,114,207,0.4)); }
+    50% { filter: drop-shadow(0 8px 24px rgba(155,114,207,0.7)); }
+  }
+
+  .hero-eyebrow {
+    font-size: 0.68rem;
+    letter-spacing: 0.25em;
+    color: rgba(220,200,255,1);
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    text-shadow: none;
+  }
+
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.2rem, 6vw, 4rem);
+    font-weight: 300;
+    line-height: 1.1;
+    color: white;
+    margin-bottom: 0.4rem;
+    text-shadow: none;
+  }
+
+  .hero-title strong {
+    font-weight: 600;
+    background: linear-gradient(135deg, #ffffff 0%, #ddc8ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.88);
+    margin-bottom: 1.2rem;
+    font-weight: 400;
+    text-shadow: none;
+  }
+
+  .hero-dates {
+    display: flex;
+    gap: 0.6rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1.2rem;
+  }
+
+  .hero-date-tag {
+    background: rgba(255,255,255,0.14);
+    border: 1px solid rgba(255,255,255,0.30);
+    border-radius: 24px;
+    padding: 7px 18px;
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.95);
+    font-weight: 500;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  .hero-members {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    font-size: 0.78rem;
+    color: var(--text-light);
+  }
+
+  .member-tag {
+    background: var(--lavender-light);
+    border-radius: 12px;
+    padding: 4px 12px;
+    color: var(--purple-dark);
+  }
+
+  /* ───────────── SECTIONS ───────────── */
+  section {
+    padding: 80px 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    scroll-margin-top: 60px;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .section-tag {
+    display: inline-block;
+    font-size: 0.68rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--purple);
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+    background: var(--lavender-light);
+    padding: 4px 14px;
+    border-radius: 20px;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    color: var(--purple-deep);
+    line-height: 1.2;
+  }
+
+  /* ───────────── CARDS ───────────── */
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+  }
+
+  .card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-2px);
+  }
+
+  /* ───────────── SCHEDULE ───────────── */
+  .schedule-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .day-card {
+    background: white;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+
+  .day-header {
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: linear-gradient(135deg, var(--lavender-pale), white);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .day-header.concert-day {
+    background: linear-gradient(135deg, #ede0ff, #fce4ff);
+  }
+
+  .day-num {
+    width: 50px; height: 50px;
+    background: var(--purple-dark);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-shrink: 0;
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    line-height: 1.2;
+  }
+
+  .day-num .num { font-size: 1.2rem; font-weight: 700; line-height: 1; }
+
+  .concert-day .day-num {
+    background: linear-gradient(135deg, var(--purple-dark), var(--gold));
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .day-info { flex: 1; }
+  .day-date { font-size: 1rem; font-weight: 700; color: var(--text-dark); }
+  .day-label { font-size: 0.78rem; color: var(--text-light); }
+
+  .concert-badge {
+    background: linear-gradient(135deg, var(--purple-dark), var(--purple));
+    color: white;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+
+  .day-events {
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .event-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .event-time {
+    font-size: 0.78rem;
+    color: var(--purple);
+    font-weight: 700;
+    min-width: 52px;
+    padding-top: 2px;
+  }
+
+  .event-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--lavender);
+    margin-top: 6px;
+    flex-shrink: 0;
+  }
+
+  .event-content { flex: 1; }
+  .event-title { font-size: 0.88rem; font-weight: 600; color: var(--text-dark); }
+  .event-detail { font-size: 0.78rem; color: var(--text-light); margin-top: 1px; }
+
+  /* ───────────── FLIGHT CARDS ───────────── */
+  .flight-section .flights-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 640px) {
+    .flight-section .flights-grid { grid-template-columns: 1fr; }
+  }
+
+  .flight-card {
+    background: white;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+  }
+
+  .flight-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--purple);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .flight-route {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .airport {
+    text-align: center;
+  }
+
+  .airport-code {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--purple-deep);
+    line-height: 1;
+  }
+
+  .airport-name {
+    font-size: 0.65rem;
+    color: var(--text-light);
+    margin-top: 2px;
+  }
+
+  .flight-arrow {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .flight-line {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, var(--lavender), var(--purple));
+    position: relative;
+  }
+
+  .flight-line::after {
+    content: '✈';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: var(--purple);
+  }
+
+  .flight-duration {
+    font-size: 0.7rem;
+    color: var(--text-light);
+    margin-top: 12px;
+  }
+
+  .flight-times {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.75rem;
+  }
+
+  .flight-time-item { text-align: center; }
+  .flight-time { font-size: 1.2rem; font-weight: 700; color: var(--text-dark); }
+  .flight-time-label { font-size: 0.65rem; color: var(--text-light); }
+
+  .flight-info-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .flight-tag {
+    background: var(--lavender-light);
+    color: var(--purple-dark);
+    padding: 3px 10px;
+    border-radius: 10px;
+    font-size: 0.68rem;
+    font-weight: 500;
+  }
+
+  /* ───────────── CONCERT GUIDE ───────────── */
+  .concert-hero {
+    background: linear-gradient(135deg, var(--purple-deep), var(--purple-dark));
+    border-radius: 24px;
+    padding: 2.5rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .concert-hero::before {
+    content: '💜';
+    position: absolute;
+    font-size: 120px;
+    opacity: 0.05;
+    right: -20px;
+    top: -20px;
+  }
+
+  .concert-hero h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .concert-meta {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .concert-meta-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+
+  .concert-meta-label { font-size: 0.65rem; opacity: 0.7; letter-spacing: 0.1em; text-transform: uppercase; }
+  .concert-meta-value { font-size: 1rem; font-weight: 700; }
+
+  .guide-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+  }
+
+  .guide-card {
+    background: white;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    padding: 1.25rem;
+    box-shadow: var(--shadow);
+  }
+
+  .guide-card h4 {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--purple-dark);
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .guide-card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .guide-card li {
+    font-size: 0.82rem;
+    color: var(--text-mid);
+    padding-left: 1rem;
+    position: relative;
+    line-height: 1.5;
+  }
+
+  .guide-card li::before {
+    content: '💜';
+    position: absolute;
+    left: 0;
+    font-size: 0.6rem;
+    top: 3px;
+  }
+
+  /* ───────────── PACKING LIST ───────────── */
+  .packing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+
+  .pack-category {
+    background: white;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    padding: 1.25rem;
+    box-shadow: var(--shadow);
+  }
+
+  .pack-category h4 {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--purple-dark);
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .pack-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 0;
+    border-bottom: 1px solid var(--lavender-pale);
+    cursor: pointer;
+  }
+
+  .pack-item:last-child { border-bottom: none; }
+
+  .pack-check {
+    width: 18px; height: 18px;
+    border: 2px solid var(--lavender);
+    border-radius: 4px;
+    flex-shrink: 0;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    color: white;
+  }
+
+  .pack-item.checked .pack-check {
+    background: var(--purple);
+    border-color: var(--purple);
+  }
+
+  .pack-item.checked .pack-check::after { content: '✓'; }
+
+  .pack-label {
+    font-size: 0.82rem;
+    color: var(--text-dark);
+    flex: 1;
+  }
+
+  .pack-item.checked .pack-label {
+    text-decoration: line-through;
+    color: var(--text-light);
+  }
+
+  /* ───────────── TODO LIST ───────────── */
+  .todo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+
+  .todo-category {
+    background: white;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    padding: 1.25rem;
+    box-shadow: var(--shadow);
+  }
+
+  .todo-category h4 {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--purple-dark);
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--lavender-light);
+  }
+
+  .todo-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 6px 0;
+    cursor: pointer;
+  }
+
+  .todo-check {
+    width: 20px; height: 20px;
+    border: 2px solid var(--lavender);
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 1px;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: white;
+  }
+
+  .todo-item.done .todo-check {
+    background: var(--purple);
+    border-color: var(--purple);
+  }
+
+  .todo-item.done .todo-check::after { content: '✓'; }
+
+  .todo-text {
+    font-size: 0.82rem;
+    color: var(--text-dark);
+    line-height: 1.5;
+  }
+
+  .todo-item.done .todo-text {
+    text-decoration: line-through;
+    color: var(--text-light);
+  }
+
+  .todo-priority {
+    font-size: 0.6rem;
+    padding: 2px 6px;
+    border-radius: 8px;
+    font-weight: 600;
+    flex-shrink: 0;
+    margin-top: 3px;
+  }
+
+  .todo-priority.urgent {
+    background: #ffe8e8;
+    color: #c04040;
+  }
+
+  /* ───────────── RESTAURANTS ───────────── */
+  .restaurant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .restaurant-card {
+    background: white;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s;
+  }
+
+  .restaurant-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+  }
+
+  .restaurant-img {
+    height: 120px;
+    background: linear-gradient(135deg, var(--lavender-light), var(--lavender-pale));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+  }
+
+  .restaurant-body { padding: 1.25rem; }
+
+  .restaurant-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 4px;
+  }
+
+  .restaurant-type {
+    font-size: 0.72rem;
+    color: var(--text-light);
+    margin-bottom: 0.75rem;
+  }
+
+  .restaurant-note {
+    font-size: 0.78rem;
+    color: var(--purple-dark);
+    background: var(--lavender-pale);
+    padding: 8px 12px;
+    border-radius: 10px;
+    line-height: 1.5;
+  }
+
+  .bts-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: linear-gradient(135deg, var(--purple-dark), var(--purple));
+    color: white;
+    padding: 3px 10px;
+    border-radius: 10px;
+    font-size: 0.65rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  /* ───────────── SIGHTSEEING ───────────── */
+  .sightseeing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .sight-card {
+    background: white;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    padding: 1.25rem;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: all 0.3s;
+  }
+
+  .sight-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+  }
+
+  .sight-emoji { font-size: 2.5rem; margin-bottom: 0.5rem; display: block; }
+  .sight-name { font-size: 0.9rem; font-weight: 700; color: var(--text-dark); margin-bottom: 4px; }
+  .sight-desc { font-size: 0.75rem; color: var(--text-light); line-height: 1.5; }
+
+  /* ───────────── MAP ───────────── */
+  .map-section .map-container {
+    background: white;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+
+  .map-iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+  }
+
+  .map-pins {
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .map-pin-item {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .pin-icon {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+
+  .pin-icon.hotel { background: var(--lavender-light); }
+  .pin-icon.concert { background: linear-gradient(135deg, var(--purple-dark), var(--purple)); }
+  .pin-icon.airport { background: #e0f0ff; }
+  .pin-icon.restaurant { background: #fff0e0; }
+
+  .pin-info { flex: 1; }
+  .pin-name { font-size: 0.85rem; font-weight: 600; color: var(--text-dark); }
+  .pin-address { font-size: 0.72rem; color: var(--text-light); margin-top: 2px; }
+
+  /* ───────────── TIMEZONE ───────────── */
+  .timezone-display {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  @media (max-width: 480px) {
+    .timezone-display { grid-template-columns: 1fr; }
+  }
+
+  .tz-card {
+    background: white;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+  }
+
+  .tz-flag { font-size: 2rem; margin-bottom: 0.5rem; }
+
+  .tz-city {
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-bottom: 0.25rem;
+  }
+
+  .tz-time {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: var(--purple-deep);
+    line-height: 1;
+  }
+
+  .tz-date {
+    font-size: 0.78rem;
+    color: var(--text-light);
+    margin-top: 0.25rem;
+  }
+
+  .tz-diff {
+    background: var(--lavender-light);
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    text-align: center;
+  }
+
+  .tz-diff-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--purple-dark);
+  }
+
+  .tz-diff-label { font-size: 0.78rem; color: var(--text-mid); margin-top: 4px; }
+
+  /* ───────────── CURRENCY ───────────── */
+  .currency-section {
+    background: white;
+    border-radius: 24px;
+    border: 1px solid var(--border);
+    padding: 2rem;
+    box-shadow: var(--shadow);
+  }
+
+  .calc-container {
+    background: linear-gradient(135deg, var(--purple-deep), var(--purple-dark));
+    border-radius: 20px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    color: white;
+  }
+
+  .calc-title {
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .calc-input-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .calc-field {
+    flex: 1;
+    min-width: 120px;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 12px;
+    padding: 12px 16px;
+    color: white;
+    font-size: 1.4rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    outline: none;
+    width: 100%;
+  }
+
+  .calc-field::placeholder { opacity: 0.5; }
+
+  .calc-arrow {
+    font-size: 1.5rem;
+    opacity: 0.7;
+    flex-shrink: 0;
+  }
+
+  .calc-result {
+    background: rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .calc-result-label {
+    font-size: 0.68rem;
+    opacity: 0.7;
+    margin-bottom: 4px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .calc-result-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  .calc-rate {
+    font-size: 0.7rem;
+    opacity: 0.6;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+
+  /* ───────────── EXPENSE FORM ───────────── */
+  .expense-form {
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    background: var(--lavender-pale);
+  }
+
+  .expense-form h3 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--purple-dark);
+    margin-bottom: 1rem;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .form-group { display: flex; flex-direction: column; gap: 4px; }
+
+  .form-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--text-mid);
+    letter-spacing: 0.05em;
+  }
+
+  .form-input, .form-select {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-size: 0.85rem;
+    color: var(--text-dark);
+    background: white;
+    outline: none;
+    font-family: 'Noto Sans JP', sans-serif;
+    transition: border-color 0.2s;
+  }
+
+  .form-input:focus, .form-select:focus {
+    border-color: var(--purple);
+    box-shadow: 0 0 0 3px rgba(155,114,207,0.1);
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, var(--purple-dark), var(--purple));
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Noto Sans JP', sans-serif;
+    transition: all 0.2s;
+    letter-spacing: 0.05em;
+    width: 100%;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(107,79,160,0.3);
+  }
+
+  /* ───────────── EXPENSE SUMMARY ───────────── */
+  .expense-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .expense-total-card {
+    background: linear-gradient(135deg, var(--purple-deep), var(--purple-dark));
+    color: white;
+    border-radius: 16px;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .expense-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+  }
+
+  .expense-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-bottom: 4px;
+  }
+
+  .expense-card .expense-label { color: var(--text-light); opacity: 1; }
+
+  .expense-amount {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .expense-card .expense-amount { color: var(--purple-dark); }
+
+  /* ───────────── EXPENSE TABLE ───────────── */
+  .expense-table-wrap {
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+  }
+
+  thead {
+    background: var(--lavender-light);
+  }
+
+  thead th {
+    padding: 10px 12px;
+    text-align: left;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--purple-dark);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  tbody tr {
+    border-bottom: 1px solid var(--lavender-pale);
+  }
+
+  tbody tr:last-child { border-bottom: none; }
+
+  tbody td {
+    padding: 10px 12px;
+    color: var(--text-dark);
+  }
+
+  tbody tr:hover { background: var(--lavender-pale); }
+
+  .person-tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 8px;
+    font-size: 0.7rem;
+    font-weight: 600;
+  }
+
+  .person-kanako { background: #ffe0f0; color: #c0408a; }
+  .person-rika { background: #e0f0ff; color: #4070c0; }
+  .person-eri { background: #e8ffe0; color: #408040; }
+
+  /* ───────────── TROUBLE ───────────── */
+  .trouble-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+  }
+
+  .trouble-card {
+    background: white;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    padding: 1.25rem;
+    box-shadow: var(--shadow);
+  }
+
+  .trouble-card h4 {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .trouble-card p {
+    font-size: 0.8rem;
+    color: var(--text-mid);
+    line-height: 1.7;
+  }
+
+  .emergency-nums {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .emergency-num {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--lavender-pale);
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  .emergency-num .num { font-weight: 700; color: var(--purple-dark); }
+
+  /* ───────────── OUTFIT ───────────── */
+  .outfit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .outfit-card {
+    background: white;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+
+  .outfit-day {
+    background: linear-gradient(135deg, var(--lavender-light), var(--lavender-pale));
+    padding: 1rem 1.25rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--purple-dark);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .outfit-day.concert {
+    background: linear-gradient(135deg, #ede0ff, #fce4ff);
+  }
+
+  .outfit-body { padding: 1.25rem; }
+
+  .outfit-theme {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+  }
+
+  .outfit-items {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .outfit-items li {
+    font-size: 0.8rem;
+    color: var(--text-mid);
+    padding-left: 14px;
+    position: relative;
+  }
+
+  .outfit-items li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: var(--lavender);
+    font-size: 0.55rem;
+    top: 4px;
+  }
+
+  .outfit-colors {
+    display: flex;
+    gap: 4px;
+    margin-top: 0.75rem;
+  }
+
+  .color-dot {
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  }
+
+  /* ───────────── TICKET ───────────── */
+  .ticket-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .ticket-card {
+    background: white;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ticket-header {
+    background: linear-gradient(135deg, var(--purple-deep), var(--purple-dark));
+    padding: 1.25rem 1.5rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .ticket-header h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+  }
+
+  .ticket-date-badge {
+    background: rgba(255,255,255,0.2);
+    border-radius: 10px;
+    padding: 4px 12px;
+    font-size: 0.78rem;
+    font-weight: 600;
+  }
+
+  .ticket-body {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .ticket-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--lavender-pale);
+    font-size: 0.82rem;
+  }
+
+  .ticket-row:last-child { border-bottom: none; }
+  .ticket-key { color: var(--text-light); }
+  .ticket-val { font-weight: 600; color: var(--text-dark); }
+
+  /* ───────────── FOOTER ───────────── */
+  footer {
+    background: var(--purple-deep);
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.78rem;
+    margin-top: 4rem;
+  }
+
+  footer .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    color: var(--lavender-light);
+    margin-bottom: 0.5rem;
+  }
+
+  /* ARMY text decoration */
+  .army-text {
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+  }
+
+  /* ───────────── RESPONSIVE ───────────── */
+  @media (max-width: 768px) {
+    nav { padding: 0 1rem; }
+    .nav-links { padding: 0; }
+    .nav-links a { padding: 5px 8px; font-size: 0.65rem; }
+    section { padding: 60px 1rem; }
+    .currency-section { padding: 1.5rem; }
+  }
+
+  /* ───────────── ANIMATIONS ───────────── */
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade-in {
+    animation: fadeInUp 0.6s ease forwards;
+  }
+
+  /* Scrollspy active */
+  .nav-links a.active {
+    background: var(--lavender-light);
+    color: var(--purple-dark);
+    font-weight: 600;
+  }
+
+  .section-divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+    margin: 0;
+  }
+
+  /* ── ARMY logo decoration ── */
+  .army-logo {
+    display: inline-block;
+    width: 28px; height: 28px;
+    background: linear-gradient(135deg, var(--purple-dark), var(--purple));
+    border-radius: 50%;
+    color: white;
+    font-size: 0.55rem;
+    font-weight: 900;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.02em;
+    vertical-align: middle;
+  }
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="nav-inner">
+    <ul class="nav-links">
+      <li><a href="#schedule" onclick="scrollTo('schedule')">スケジュール</a></li>
+      <li><a href="#flight" onclick="scrollTo('flight')">フライト</a></li>
+      <li><a href="#concert" onclick="scrollTo('concert')">コンサート</a></li>
+      <li><a href="#packing" onclick="scrollTo('packing')">持ち物</a></li>
+      <li><a href="#todo" onclick="scrollTo('todo')">やること</a></li>
+      <li><a href="#restaurants" onclick="scrollTo('restaurants')">聖地</a></li>
+      <li><a href="#sightseeing" onclick="scrollTo('sightseeing')">観光</a></li>
+      <li><a href="#currency" onclick="scrollTo('currency')">家計簿</a></li>
+      <li><a href="#map" onclick="scrollTo('map')">マップ</a></li>
+      <li><a href="#timezone" onclick="scrollTo('timezone')">時差</a></li>
+      <li><a href="#trouble" onclick="scrollTo('trouble')">トラブル</a></li>
+      <li><a href="#outfit" onclick="scrollTo('outfit')">コーデ</a></li>
+      <li><a href="#weather-link" onclick="scrollTo('weather-link')">天気</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div id="home" class="hero">
+  <img class="hero-bg-img" src="https://github.com/kanakomiyahara/bts-lasvegas/blob/main/bts2.jpg?raw=true" alt="BTS" onerror="this.style.display='none'">
+  <div class="hero-bg-overlay"></div>
+  <div class="hero-decorations">
+    <div class="hero-circle"></div>
+    <div class="hero-circle"></div>
+  </div>
+
+  <div class="bts-emblem">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="48" fill="none" stroke="#c9b8e8" stroke-width="2"/>
+      <circle cx="50" cy="50" r="38" fill="none" stroke="#9b72cf" stroke-width="1.5"/>
+      <text x="50" y="44" text-anchor="middle" font-family="serif" font-size="18" font-weight="bold" fill="#6b4fa0">BTS</text>
+      <text x="50" y="62" text-anchor="middle" font-family="serif" font-size="8" fill="#9b72cf" letter-spacing="3">ARMY</text>
+      <text x="50" y="76" text-anchor="middle" font-size="14" fill="#c9b8e8">💜</text>
+    </svg>
+  </div>
+
+  <p class="hero-eyebrow">✈ LAS VEGAS CONCERT TOUR 2026</p>
+
+  <h1 class="hero-title" style="font-size: clamp(1.5rem, 4.5vw, 3rem);">
+    <strong style="font-size: clamp(1rem, 3vw, 1.6rem); letter-spacing:0.08em;">小野寺家</strong><br>
+    <strong>BTS</strong> ラスベガス<br>
+    <span style="font-style:italic; font-weight:300;">旅のしおり</span>
+  </h1>
+
+  <p class="hero-subtitle">5月26日〜30日 ・ Allegiant Stadium</p>
+
+  <div class="hero-dates">
+    <span class="hero-date-tag">✈ 出発 5/26（火）NRT→SEA→LAS</span>
+    <span class="hero-date-tag">🎤 コンサート 5/27・5/28</span>
+    <span class="hero-date-tag">✈ 帰国 5/30（土）成田着</span>
+  </div>
+
+
+</div>
+
+<div class="section-divider"></div>
+
+<!-- SCHEDULE -->
+<section id="schedule">
+  <div class="section-header">
+    <span class="section-tag">📅 SCHEDULE</span>
+    <h2 class="section-title">旅程スケジュール</h2>
+  </div>
+
+  <div class="schedule-grid">
+
+    <!-- Day 1: 出発日 -->
+    <div class="day-card">
+      <div class="day-header">
+        <div class="day-num"><span class="num">26</span>TUE</div>
+        <div class="day-info">
+          <div class="day-date">5月26日（火）1日目</div>
+          <div class="day-label">出発日 ✈ 成田→シアトル→ラスベガス</div>
+        </div>
+      </div>
+      <div class="day-events">
+        <div class="event-item">
+          <span class="event-time">18:00</span>
+          <div class="event-dot"></div>
+          <div class="event-content">
+            <div class="event-title">✈ アラスカ航空 824便 出発（日本時間）</div>
+            <div class="event-detail">成田国際空港 → シアトル・タコマ国際空港（9時間15分）／Airbus A330-200<br>
+            🏢 ターミナル2という情報あり（変更の可能性あり）→ <a href="#terminal-note" style="color:var(--purple-dark); font-weight:600;">以下で確認</a></div>
+          </div>
+        </div>
+        <div class="event-item">
+          <span class="event-time">11:15</span>
+          <div class="event-dot"></div>
+          <div class="event-content">
+            <div class="event-title">🛬 シアトル・タコマ国際空港 到着（現地時間・5/26）</div>
+            <div class="event-detail">乗継時間 5時間5分・入国審査あり</div>
+          </div>
+        </div>
+        <div class="event-item">
+          <span class="event-time">16:20</span>
+          <div class="event-dot"></div>
+          <div class="event-content">
+            <div class="event-title">✈ アラスカ航空 551便 シアトル出発</div>
+            <div class="event-detail">シアトル・タコマ国際空港 → ラスベガス（2時間37分）／Boeing 737-900</div>
+          </div>
+        </div>
+        <div class="event-item">
+          <span class="event-time">18:57</span>
+          <div class="event-dot"></div>
+          <div class="event-content">
+            <div class="event-title">🛬 ラスベガス ハリー・リード国際空港 到着</div>
+            <div class="event-detail">ターミナル3・Harry Reid International Airport<br>
+            入国審査はシアトルで済み・LASは国内線到着扱い。荷物受取（約15〜20分）→ Uber乗り場は<a href="#uber-las" style="color:var(--purple-dark); font-weight:600;">以下参考</a> → 車で約18分ほど</div>
+          </div>
+        </div>
+        <div class="event-item">
+          <span class="event-time">20:00頃</span>
+          <div class="event-dot" style="background:var(--purple);"></div>
+          <div class="event-content">
+            <div class="event-title">🏨 パームズカジノリゾート チェックイン（予定）</div>
+            <div class="event-detail">長旅お疲れ様！ゆっくり休もう 💜</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 2: CONCERT 1 -->
+    <div class="day-card">
+      <div class="day-header concert-day">
+        <div class="day-num"><span class="num">27</span>WED</div>
+        <div class="day-info">
+          <div class="day-date">5月27日（水）2日目</div>
+          <div class="day-label">🎤 コンサート Day 1！！</div>
+        </div>
+        <span class="concert-badge">💜 CONCERT</span>
+      </div>
+      <div class="day-events">
+        <div class="event-item">
+          <span class="event-time">午前</span>
+          <div class="event-dot"></div>
+          <div class="event-content">
+            <div class="event-title">☀️ ゆったり朝を過ごす</div>
+            <div class="event-detail">コーデ最終確認・荷物準備</div>
+          </div>
+        </div>
+        <div class="event-item">
+          <span class="event-time">15:00</span>
+          <div class="event-dot"></div>
+          <div class="event-content">
+            <div class="event-title">🏟 Allegiant Stadium 周辺へ</div>
+            <div class="event-detail">グッズ列・フォトスポット・雰囲気を楽しむ</div>
+          </div>
+        </div>
+        <div class="event-item">
+          <span class="event-time">18:30</span>
+          <div class="event-dot"></div>
+          <div class="event-content">
+            <div class="event-title">🚪 入場開始</div>
+            <div class="event-detail">チケット・身分証明書を必ず持参</div>
+          </div>
+        </div>
+        <div class="event-item">
+          <span class="event-time">20:00</span>
+          <div class="event-dot"></div>
+          <div class="event-content">
+            <div class="event-title">💜 BTS コンサート 開演！！</div>
+            <div class="event-detail">Allegiant Stadium・最高の夜を楽しもう！</div>
+          </div>
+        </div>
+        <div class="event-item">
+          <span class="event-time">コンサート後</span>
+          <div class="event-dot" style="background:var(--gold);"></div>
+          <div class="event-content">
+            <div class="event-title">⛲ ベラッジオの噴水 記念撮影！</div>
+            <div class="event-detail">コンサートの余韻のまま夜の噴水へ 💜 夜は15分おき開催・3人で記念撮影！📍 3600 Las Vegas Blvd S</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 4: CONCERT 2 -->
+    <div class="day-card">
+      <div class="day-header concert-day">
+        <div class="day-num"><span class="num">28</span>THU</div>
+        <div class="day-info">
+          <div class="day-date">5月28日（木）3日目</div>
+          <div class="day-label">🎤 コンサート Day 2！！</div>
+        </div>
+        <span class="concert-badge">💜 CONCERT</span>
+      </div>
+      <div class="day-events">
+        <div class="event-item">
+          <span class="event-time">午前</span>
+          <div class="event-dot"></div>
+          <div class="event-content">
+            <div class="event-title">💭 昨日の感動を振り返り…</div>
+            <div class="event-detail">写真整理・SNS投稿・ゆっくり休む</div>
+          </div>
+        </div>
+        <div class="event-item">
+          <span class="event-time">15:00</span>
+          <div class="event-dot"></div>
+          <div class="event-content">
+            <div class="event-title">🏟 Allegiant Stadium 再び！</div>
+            <div class="event-detail">2日目コーデで気持ちを新たに</div>
+          </div>
+        </div>
+        <div class="event-item">
+          <span class="event-time">20:00</span>
+          <div class="event-dot"></div>
+          <div class="event-content">
+            <div class="event-title">💜 BTS コンサート Day 2 開演！！</div>
+            <div class="event-detail">最後まで全力で楽しもう！！</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 4: 観光・帰国準備 -->
+    <div class="day-card">
+      <div class="day-header">
+        <div class="day-num"><span class="num">29</span>FRI</div>
+        <div class="day-info">
+          <div class="day-date">5月29日（金）4日目</div>
+          <div class="day-label">帰国日 ✈ LAS→SEA→成田へ出発</div>
+        </div>
+      </div>
+      <div class="day-events">
+        <div class="event-item">
+          <span class="event-time">04:00</span>
+          <div class="event-dot"></div>
+          <div class="event-content">
+            <div class="event-title">⏰ 起床・最終準備</div>
+            <div class="event-detail">前日夜に荷造り完了しておくこと！</div>
+          </div>
+        </div>
+        <div class="event-item">
+          <span class="event-time">05:00</span>
+          <div class="event-dot"></div>
+          <div class="event-content">
+            <div class="event-title">🏨 チェックアウト・Uberでホテル出発</div>
+            <div class="event-detail">パームズカジノリゾート・空港まで約20分</div>
+          </div>
+        </div>
+        <div class="event-item">
+          <span class="event-time">05:30頃</span>
+          <div class="event-dot"></div>
+          <div class="event-content">
+            <div class="event-title">✈ LAS空港 到着（出発1時間30分前）</div>
+            <div class="event-detail">ターミナル3・保安検査は余裕をもって</div>
+          </div>
+        </div>
+        <div class="event-item">
+          <span class="event-time">07:00</span>
+          <div class="event-dot"></div>
+          <div class="event-content">
+            <div class="event-title">✈ アラスカ航空 479便 LAS出発</div>
+            <div class="event-detail">ラスベガス → シアトル・タコマ国際空港（2時間52分）／Boeing 737-900</div>
+          </div>
+        </div>
+        <div class="event-item">
+          <span class="event-time">09:52</span>
+          <div class="event-dot"></div>
+          <div class="event-content">
+            <div class="event-title">🛬 シアトル・タコマ国際空港 到着</div>
+            <div class="event-detail">乗継時間 3時間38分・国際線乗換</div>
+          </div>
+        </div>
+        <div class="event-item">
+          <span class="event-time">13:30</span>
+          <div class="event-dot" style="background:var(--gold);"></div>
+          <div class="event-content">
+            <div class="event-title">✈ アラスカ航空 823便 シアトル出発</div>
+            <div class="event-detail">シアトル → 東京 成田（10時間30分）／Airbus A330-200</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 5: 帰国着 -->
+    <div class="day-card">
+      <div class="day-header">
+        <div class="day-num"><span class="num">30</span>SAT</div>
+        <div class="day-info">
+          <div class="day-date">5月30日（土）5日目</div>
+          <div class="day-label">帰国 🇯🇵 成田着</div>
+        </div>
+      </div>
+      <div class="day-events">
+        <div class="event-item">
+          <span class="event-time">16:00</span>
+          <div class="event-dot"></div>
+          <div class="event-content">
+            <div class="event-title">🛬 成田国際空港 到着</div>
+            <div class="event-detail">お疲れ様でした！最高の旅をありがとう 💜</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- FLIGHT -->
+<section id="flight" class="flight-section">
+  <div class="section-header">
+    <span class="section-tag">✈ FLIGHT & TRANSIT</span>
+    <h2 class="section-title">フライト＆移動</h2>
+  </div>
+
+  <div class="flights-grid">
+
+    <!-- 往路 NRT→SEA -->
+    <div class="flight-card">
+      <div class="flight-label">✈ 往路 ① &nbsp; 5/26（火）日本時間</div>
+      <div class="flight-route">
+        <div class="airport">
+          <div class="airport-code">NRT</div>
+          <div class="airport-name">成田空港</div>
+        </div>
+        <div class="flight-arrow">
+          <div class="flight-line"></div>
+          <div class="flight-duration">9時間15分</div>
+        </div>
+        <div class="airport">
+          <div class="airport-code">SEA</div>
+          <div class="airport-name">シアトル・タコマ</div>
+        </div>
+      </div>
+      <div class="flight-times">
+        <div class="flight-time-item">
+          <div class="flight-time">18:00</div>
+          <div class="flight-time-label">出発（5/26 日本時間）</div>
+        </div>
+        <div class="flight-time-item">
+          <div class="flight-time">11:15</div>
+          <div class="flight-time-label">到着（5/26 現地時間）</div>
+        </div>
+      </div>
+      <div class="flight-info-row">
+        <span class="flight-tag">アラスカ航空 824便</span>
+        <span class="flight-tag">Airbus A330-200</span>
+        <span class="flight-tag">エコノミー CLASS: N</span>
+      </div>
+      <div id="terminal-note" style="margin-top:0.75rem; padding:0.75rem; background:#fff8e8; border-radius:10px; border-left:3px solid var(--gold); font-size:0.75rem; color:var(--text-mid); line-height:1.7;">
+        ⚠️ <strong>ターミナル・カウンターは出発前に必ず最新情報を確認してください</strong><br>
+        成田空港公式サイト「<a href="https://www.narita-airport.jp/jp/flight/" target="_blank" style="color:var(--purple-dark);">本日のフライト検索</a>」で便名（AS 824）を検索してターミナル・カウンターを確認。また、アラスカ航空や予約サイト側の旅程表で出発ターミナルの最新表示もチェック。変更になる場合があります。
+      </div>
+    </div>
+
+    <!-- 往路 SEA→LAS -->
+    <div class="flight-card">
+      <div class="flight-label">✈ 往路 ② &nbsp; 5/26（火）現地時間</div>
+      <div class="flight-route">
+        <div class="airport">
+          <div class="airport-code">SEA</div>
+          <div class="airport-name">シアトル・タコマ</div>
+        </div>
+        <div class="flight-arrow">
+          <div class="flight-line"></div>
+          <div class="flight-duration">2時間37分</div>
+        </div>
+        <div class="airport">
+          <div class="airport-code">LAS</div>
+          <div class="airport-name">ラスベガス T3</div>
+        </div>
+      </div>
+      <div class="flight-times">
+        <div class="flight-time-item">
+          <div class="flight-time">16:20</div>
+          <div class="flight-time-label">出発</div>
+        </div>
+        <div class="flight-time-item">
+          <div class="flight-time">18:57</div>
+          <div class="flight-time-label">到着</div>
+        </div>
+      </div>
+      <div class="flight-info-row">
+        <span class="flight-tag">アラスカ航空 551便</span>
+        <span class="flight-tag">Boeing 737-900 (winglets)</span>
+        <span class="flight-tag">エコノミー CLASS: V</span>
+      </div>
+      <div id="uber-las" style="margin-top:0.75rem; padding:0.75rem; background:#f5f0ff; border-radius:10px; border-left:3px solid var(--purple); font-size:0.75rem; color:var(--text-mid); line-height:1.8;">
+        🚗 <strong>ターミナル3のUber乗り場</strong>（<a href="https://www.lvtaizen.com/1150/" target="_blank" style="color:var(--purple-dark);">解説サイト</a>）<br>
+        <strong>1.</strong> ライドシェアの標識に従う<br>
+        ターミナル3に到着したら、ライドシェアの標識に従って進みます。<br>
+        <strong>2.</strong> 駐車橋を渡る<br>
+        頭上に「Parking &amp; Lyft / Uber」のサインがある駐車橋を渡り、立体駐車場へ入ります。<br>
+        <strong>3.</strong> ライドシェア乗り場へ<br>
+        駐車場の右手を見ると、ライドシェア乗り場があります。アプリでピックアップ場所を「Terminal 3 (T3)」と選択してください。
+      </div>
+    </div>
+
+    <!-- 復路 LAS→SEA -->
+    <div class="flight-card">
+      <div class="flight-label">✈ 復路 ① &nbsp; 5/29（金）現地時間</div>
+      <div class="flight-route">
+        <div class="airport">
+          <div class="airport-code">LAS</div>
+          <div class="airport-name">ラスベガス T3</div>
+        </div>
+        <div class="flight-arrow">
+          <div class="flight-line"></div>
+          <div class="flight-duration">2時間52分</div>
+        </div>
+        <div class="airport">
+          <div class="airport-code">SEA</div>
+          <div class="airport-name">シアトル・タコマ</div>
+        </div>
+      </div>
+      <div class="flight-times">
+        <div class="flight-time-item">
+          <div class="flight-time">07:00</div>
+          <div class="flight-time-label">出発</div>
+        </div>
+        <div class="flight-time-item">
+          <div class="flight-time">09:52</div>
+          <div class="flight-time-label">到着</div>
+        </div>
+      </div>
+      <div class="flight-info-row">
+        <span class="flight-tag">アラスカ航空 479便</span>
+        <span class="flight-tag">Boeing 737-900 (winglets)</span>
+        <span class="flight-tag">エコノミー CLASS: M</span>
+      </div>
+    </div>
+
+    <!-- 復路 SEA→NRT -->
+    <div class="flight-card">
+      <div class="flight-label">✈ 復路 ② &nbsp; 5/29（金）→5/30（土）</div>
+      <div class="flight-route">
+        <div class="airport">
+          <div class="airport-code">SEA</div>
+          <div class="airport-name">シアトル・タコマ</div>
+        </div>
+        <div class="flight-arrow">
+          <div class="flight-line"></div>
+          <div class="flight-duration">10時間30分</div>
+        </div>
+        <div class="airport">
+          <div class="airport-code">NRT</div>
+          <div class="airport-name">成田空港</div>
+        </div>
+      </div>
+      <div class="flight-times">
+        <div class="flight-time-item">
+          <div class="flight-time">13:30</div>
+          <div class="flight-time-label">出発（5/29 現地時間）</div>
+        </div>
+        <div class="flight-time-item">
+          <div class="flight-time">16:00</div>
+          <div class="flight-time-label">翌日5/30 到着</div>
+        </div>
+      </div>
+      <div class="flight-info-row">
+        <span class="flight-tag">アラスカ航空 823便</span>
+        <span class="flight-tag">Airbus A330-200</span>
+        <span class="flight-tag">エコノミー CLASS: L</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Hotel -->
+  <div style="margin-top: 2rem;">
+    <div class="card">
+      <div style="display:flex; align-items:center; gap: 1rem; flex-wrap: wrap;">
+        <div style="font-size:3rem;">🏨</div>
+        <div style="flex:1;">
+          <div style="font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--purple); font-weight:600; margin-bottom:4px;">HOTEL</div>
+          <div style="font-family:'Playfair Display', serif; font-size:1.2rem; color:var(--purple-deep); margin-bottom:4px;">Palms Casino Resort</div>
+          <div style="font-size:0.8rem; color:var(--text-light);">Las Vegas, NV</div>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+          <div style="text-align:center;">
+            <div style="font-size:0.65rem; color:var(--text-light); text-transform:uppercase; letter-spacing:0.1em;">チェックイン</div>
+            <div style="font-weight:700; color:var(--text-dark);">5/26 15:00</div>
+          </div>
+          <div style="text-align:center;">
+            <div style="font-size:0.65rem; color:var(--text-light); text-transform:uppercase; letter-spacing:0.1em;">チェックアウト</div>
+            <div style="font-weight:700; color:var(--text-dark);">5/29 11:00</div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:1rem; padding-top:1rem; border-top:1px solid var(--border); display:flex; flex-wrap:wrap; gap:0.5rem;">
+        <span class="flight-tag">🏨 パームズカジノリゾート</span>
+        <span class="flight-tag">🏊 プール</span>
+        <span class="flight-tag">🍽 レストラン</span>
+        <span class="flight-tag">❄️ 冷房</span>
+        <span class="flight-tag">💪 ジム</span>
+      </div>
+      <div style="margin-top:0.75rem; padding:0.75rem; background:#fff8e8; border-radius:10px; border-left:3px solid var(--gold); font-size:0.75rem; color:var(--text-mid); line-height:1.7;">
+        ⚠️ <strong>パームス・プレイス（Palms Place）ご注意：</strong>隣接するタワー「パームス・プレイス」に宿泊される場合は、チェックイン時間が <strong>16:00（午後4時）</strong> からとなりますのでご注意ください。
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<div class="section-divider"></div>
+
+<!-- CONCERT GUIDE -->
+<section id="concert">
+  <div class="section-header">
+    <span class="section-tag">🎤 CONCERT GUIDE</span>
+    <h2 class="section-title">コンサート当日ガイド</h2>
+  </div>
+
+  <div class="concert-hero">
+    <h3>BTS at Allegiant Stadium 💜</h3>
+    <p style="opacity:0.8; font-size:0.88rem;">5月27日・28日 20:00 開演</p>
+    <a href="https://maps.google.com/?q=Allegiant+Stadium,+3333+Al+Davis+Way,+Las+Vegas,+NV" target="_blank" style="display:inline-block; margin-top:0.5rem; background:rgba(255,255,255,0.18); border:1px solid rgba(255,255,255,0.35); border-radius:20px; padding:5px 16px; font-size:0.75rem; color:white; text-decoration:none; backdrop-filter:blur(8px);">📍 Google マップで開く</a>
+    <div class="concert-meta">
+      <div class="concert-meta-item">
+        <span class="concert-meta-label">会場</span>
+        <span class="concert-meta-value">Allegiant Stadium</span>
+      </div>
+      <div class="concert-meta-item">
+        <span class="concert-meta-label">開演</span>
+        <span class="concert-meta-value">20:00</span>
+      </div>
+      <div class="concert-meta-item">
+        <span class="concert-meta-label">住所</span>
+        <span class="concert-meta-value">3333 Al Davis Way, LV</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="guide-grid">
+    <div class="guide-card">
+      <h4>⏰ タイムライン</h4>
+      <ul>
+        <li>14:00〜 会場周辺でグッズ列に並ぶ</li>
+        <li>16:00 グッズ販売開始（早めに！）</li>
+        <li>18:00〜 入場ゲートオープン</li>
+        <li>18:30 席へ移動・場所確認</li>
+        <li>20:00 開演 💜</li>
+        <li>23:00頃 終演予定</li>
+      </ul>
+    </div>
+    <div class="guide-card">
+      <h4>🎒 会場への持ち物</h4>
+      <ul>
+        <li>チケット（スマホで表示 or 印刷）</li>
+        <li>パスポート or 写真付き身分証</li>
+        <li>クリアバッグ（必須！）</li>
+        <li>スマホ・充電バッテリー</li>
+        <li>ペンライト（ARMY BOMB推奨）</li>
+        <li>うちわ・ペンパレード</li>
+        <li>現金 $（グッズ用）</li>
+      </ul>
+    </div>
+    <div class="guide-card">
+      <h4>🚫 禁止事項・注意</h4>
+      <ul>
+        <li>大きなバッグ不可（クリアバッグ規定）</li>
+        <li>一眼レフ・専門カメラ持込不可</li>
+        <li>飲食物の持ち込み不可</li>
+        <li>セキュリティ列は余裕を持って</li>
+        <li>駐車場は事前予約推奨</li>
+        <li>荷物検査あり・金属探知機あり</li>
+      </ul>
+    </div>
+    <div class="guide-card">
+      <h4>🚌 交通アクセス</h4>
+      <ul>
+        <li>Uber / Lyft が最も便利</li>
+        <li>会場最寄り：Allegiant Stadium前</li>
+        <li>終演後はUber激混み→少し歩いて乗車</li>
+        <li>ホテルから約15〜20分</li>
+        <li>Mandalay Bay / MGM 周辺で拾える</li>
+      </ul>
+    </div>
+    <div class="guide-card">
+      <h4>💜 ARMYの楽しみ方</h4>
+      <ul>
+        <li>ARMY BOMB（ペンライト）は接続必須</li>
+        <li>周りのARMYと一体感を楽しんで</li>
+        <li>推しのコーデで参戦！</li>
+        <li>ファンカフェ情報をSNSでチェック</li>
+        <li>フォトスポットで記念撮影</li>
+      </ul>
+    </div>
+    <div class="guide-card">
+      <h4>📸 推し撮りコツ</h4>
+      <ul>
+        <li>ステージ近いほど望遠不要</li>
+        <li>スローシャッター禁止・フラッシュ禁止</li>
+        <li>iPhoneの動画モードが安定</li>
+        <li>ライブ配信の可能性も→SNS注目</li>
+        <li>気持ちも大事！楽しむことが一番💜</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- PACKING -->
+<section id="packing">
+  <div class="section-header">
+    <span class="section-tag">🧳 PACKING LIST</span>
+    <h2 class="section-title">持ち物リスト</h2>
+    <p style="font-size:0.82rem; color:var(--text-light); margin-top:0.5rem;">クリックでチェックできます ✓</p>
+  </div>
+
+  <div class="packing-grid" id="packingGrid">
+    <!-- generated by JS -->
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- TODO -->
+<section id="todo">
+  <div class="section-header">
+    <span class="section-tag">✅ TODO</span>
+    <h2 class="section-title">事前やることリスト</h2>
+    <p style="font-size:0.82rem; color:var(--text-light); margin-top:0.5rem;">クリックでチェックできます ✓</p>
+  </div>
+
+  <div class="todo-grid" id="todoGrid">
+    <!-- generated by JS -->
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- RESTAURANTS -->
+<section id="restaurants">
+  <div class="section-header">
+    <span class="section-tag">🍽 BTS HOLY SPOTS</span>
+    <h2 class="section-title">BTSがラスベガスで訪れたレストラン / 聖地</h2>
+  </div>
+
+  <div class="restaurant-grid">
+    <div class="restaurant-card">
+      <div class="restaurant-img">🥩</div>
+      <div class="restaurant-body">
+        <div class="bts-badge">💜 BTS 訪問</div>
+        <div class="restaurant-name">Gordon Ramsay Steak</div>
+        <div class="restaurant-type">ステーキ・アメリカン｜Paris Las Vegas</div>
+        <div class="restaurant-note">BTS メンバーが訪れたと話題のゴードンラムゼイのレストラン。ラスベガスを代表するステーキハウス。要予約！</div>
+        <a href="https://maps.google.com/?q=Gordon+Ramsay+Steak+Paris+Las+Vegas" target="_blank" style="display:inline-flex;align-items:center;gap:4px;margin-top:10px;font-size:0.75rem;color:var(--purple-dark);text-decoration:none;background:var(--lavender-light);padding:5px 12px;border-radius:10px;font-weight:600;">📍 Googleマップで見る</a>
+      </div>
+    </div>
+    <div class="restaurant-card">
+      <div class="restaurant-img">🍣</div>
+      <div class="restaurant-body">
+        <div class="bts-badge">💜 BTS 訪問</div>
+        <div class="restaurant-name">Nobu Las Vegas</div>
+        <div class="restaurant-type">日本食・フュージョン｜Caesars Palace</div>
+        <div class="restaurant-note">世界的に有名な和食×南米フュージョン。BTSメンバーがよく食事する和食系レストラン。事前予約必須！</div>
+        <a href="https://maps.google.com/?q=Nobu+Restaurant+Caesars+Palace+Las+Vegas" target="_blank" style="display:inline-flex;align-items:center;gap:4px;margin-top:10px;font-size:0.75rem;color:var(--purple-dark);text-decoration:none;background:var(--lavender-light);padding:5px 12px;border-radius:10px;font-weight:600;">📍 Googleマップで見る</a>
+      </div>
+    </div>
+    <div class="restaurant-card">
+      <div class="restaurant-img">🍔</div>
+      <div class="restaurant-body">
+        <div class="bts-badge">💜 BTS 訪問</div>
+        <div class="restaurant-name">In-N-Out Burger</div>
+        <div class="restaurant-type">バーガー｜ラスベガス各所</div>
+        <div class="restaurant-note">西海岸といえばここ！BTSも大好きなイン・アンド・アウトバーガー。アニマルスタイルがおすすめ。</div>
+        <a href="https://maps.google.com/?q=In-N-Out+Burger+Las+Vegas" target="_blank" style="display:inline-flex;align-items:center;gap:4px;margin-top:10px;font-size:0.75rem;color:var(--purple-dark);text-decoration:none;background:var(--lavender-light);padding:5px 12px;border-radius:10px;font-weight:600;">📍 Googleマップで見る</a>
+      </div>
+    </div>
+    <div class="restaurant-card">
+      <div class="restaurant-img">🏨</div>
+      <div class="restaurant-body">
+        <div class="bts-badge">💜 BTS 宿泊・聖地</div>
+        <div class="restaurant-name">ウィン・ラスベガス</div>
+        <div class="restaurant-type">BTS前回LV滞在時のホテル｜3131 Las Vegas Blvd S</div>
+        <div class="restaurant-note">BTSが前回ラスベガス滞在した聖地ホテル！ロビー・庭園・レストランを見学。宿泊しなくても入れる。</div>
+        <a href="https://maps.google.com/?q=Wynn+Las+Vegas" target="_blank" style="display:inline-flex;align-items:center;gap:4px;margin-top:10px;font-size:0.75rem;color:var(--purple-dark);text-decoration:none;background:var(--lavender-light);padding:5px 12px;border-radius:10px;font-weight:600;">📍 Googleマップで見る</a>
+      </div>
+    </div>
+    <div class="restaurant-card">
+      <div class="restaurant-img">⛲</div>
+      <div class="restaurant-body">
+        <div class="bts-badge">📸 フォトスポット</div>
+        <div class="restaurant-name">ベラッジオ噴水</div>
+        <div class="restaurant-type">噴水ショー・必撮スポット｜3600 Las Vegas Blvd S</div>
+        <div class="restaurant-note">噴水前で3人で記念写真 💜 昼間30分おき・夕方以降15分おき開催。夜がベスト！完全無料。</div>
+        <a href="https://maps.google.com/?q=Bellagio+Fountains+Las+Vegas" target="_blank" style="display:inline-flex;align-items:center;gap:4px;margin-top:10px;font-size:0.75rem;color:var(--purple-dark);text-decoration:none;background:var(--lavender-light);padding:5px 12px;border-radius:10px;font-weight:600;">📍 Googleマップで見る</a>
+      </div>
+    </div>
+    <div class="restaurant-card">
+      <div class="restaurant-img">☕</div>
+      <div class="restaurant-body">
+        <div class="restaurant-name">Eggslut</div>
+        <div class="restaurant-type">カフェ・サンドイッチ｜The Cosmopolitan</div>
+        <div class="restaurant-note">LA発のおしゃれカフェ。インスタ映え抜群のエッグサンドは必食。ラスベガスでも大人気のスポット。</div>
+        <a href="https://maps.google.com/?q=Eggslut+Cosmopolitan+Las+Vegas" target="_blank" style="display:inline-flex;align-items:center;gap:4px;margin-top:10px;font-size:0.75rem;color:var(--purple-dark);text-decoration:none;background:var(--lavender-light);padding:5px 12px;border-radius:10px;font-weight:600;">📍 Googleマップで見る</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- SIGHTSEEING -->
+<section id="sightseeing">
+  <div class="section-header">
+    <span class="section-tag">🌟 SIGHTSEEING</span>
+    <h2 class="section-title">ラスベガス観光スポット</h2>
+  </div>
+
+  <div class="sightseeing-grid">
+    <div class="sight-card" style="border:2px solid var(--purple-dark);">
+      <span class="sight-emoji">🌐</span>
+      <div class="sight-name" style="color:var(--purple-dark);">Sphere（スフィア）</div>
+      <div class="sight-desc">世界最大の球体シアター！圧巻の没入体験。5/29予定。<br><a href="https://maps.google.com/?q=Sphere+Las+Vegas" target="_blank" style="color:var(--purple);font-size:0.72rem;">📍 マップ</a></div>
+    </div>
+    <div class="sight-card" style="border:2px solid #c0392b;">
+      <span class="sight-emoji">🏆</span>
+      <div class="sight-name" style="color:#c0392b;">AMAs 2026・MGMグランド</div>
+      <div class="sight-desc">5/25 American Music Awards！BTSの出待ち予定！<br><a href="https://maps.google.com/?q=MGM+Grand+Garden+Arena+Las+Vegas" target="_blank" style="color:#c0392b;font-size:0.72rem;">📍 マップ</a></div>
+    </div>
+    <div class="sight-card" style="border:2px solid #d4af6a;">
+      <span class="sight-emoji">🏜</span>
+      <div class="sight-name" style="color:#8b6914;">グランドキャニオン</div>
+      <div class="sight-desc">5/26 日帰り！ラスベガスから約4時間。絶景の大峡谷。<br><a href="https://maps.google.com/?q=Grand+Canyon+South+Rim" target="_blank" style="color:#8b6914;font-size:0.72rem;">📍 マップ</a></div>
+    </div>
+    <div class="sight-card">
+      <span class="sight-emoji">🎰</span>
+      <div class="sight-name">ラスベガス・ストリップ</div>
+      <div class="sight-desc">世界一有名なカジノ通り。夜のネオンは絶対見るべき！<br><a href="https://maps.google.com/?q=Las+Vegas+Strip" target="_blank" style="color:var(--purple);font-size:0.72rem;">📍 マップ</a></div>
+    </div>
+    <div class="sight-card">
+      <span class="sight-emoji">⛲</span>
+      <div class="sight-name">ベラッジオの噴水</div>
+      <div class="sight-desc">音楽に合わせて舞う噴水ショー。3人で記念写真！無料。<br><a href="https://maps.google.com/?q=Bellagio+Fountains+Las+Vegas" target="_blank" style="color:var(--purple);font-size:0.72rem;">📍 マップ</a></div>
+    </div>
+    <div class="sight-card">
+      <span class="sight-emoji">💜</span>
+      <div class="sight-name">ウィン・ラスベガス（聖地）</div>
+      <div class="sight-desc">BTS前回滞在ホテル！ロビー・庭園を見学。聖地巡礼！<br><a href="https://maps.google.com/?q=Wynn+Las+Vegas" target="_blank" style="color:var(--purple);font-size:0.72rem;">📍 マップ</a></div>
+    </div>
+    <div class="sight-card">
+      <span class="sight-emoji">🗼</span>
+      <div class="sight-name">エッフェル塔 展望台</div>
+      <div class="sight-desc">パリスホテルの半分サイズのエッフェル塔。夜景が最高！<br><a href="https://maps.google.com/?q=Eiffel+Tower+Paris+Las+Vegas" target="_blank" style="color:var(--purple);font-size:0.72rem;">📍 マップ</a></div>
+    </div>
+    <div class="sight-card">
+      <span class="sight-emoji">🌸</span>
+      <div class="sight-name">ベラッジオ植物園</div>
+      <div class="sight-desc">季節の花で飾られた豪華な植物園。写真映え抜群で無料！<br><a href="https://maps.google.com/?q=Bellagio+Conservatory+Las+Vegas" target="_blank" style="color:var(--purple);font-size:0.72rem;">📍 マップ</a></div>
+    </div>
+    <div class="sight-card">
+      <span class="sight-emoji">🏟</span>
+      <div class="sight-name">Allegiant Stadium</div>
+      <div class="sight-desc">BTSコンサート会場！外観フォトスポットも最高。<br><a href="https://maps.google.com/?q=Allegiant+Stadium+Las+Vegas" target="_blank" style="color:var(--purple);font-size:0.72rem;">📍 マップ</a></div>
+    </div>
+    <div class="sight-card">
+      <span class="sight-emoji">🎡</span>
+      <div class="sight-name">ハイローラー観覧車</div>
+      <div class="sight-desc">世界最大級の観覧車。ラスベガスを一望できる。<br><a href="https://maps.google.com/?q=High+Roller+Las+Vegas" target="_blank" style="color:var(--purple);font-size:0.72rem;">📍 マップ</a></div>
+    </div>
+    <div class="sight-card">
+      <span class="sight-emoji">🌃</span>
+      <div class="sight-name">フリーモント・ストリート</div>
+      <div class="sight-desc">巨大LEDスクリーンの天井が広がる旧市街アーケード。<br><a href="https://maps.google.com/?q=Fremont+Street+Las+Vegas" target="_blank" style="color:var(--purple);font-size:0.72rem;">📍 マップ</a></div>
+    </div>
+    <div class="sight-card">
+      <span class="sight-emoji">🛍</span>
+      <div class="sight-name">フォーラムショップス</div>
+      <div class="sight-desc">シーザーズパレス内の巨大ショッピングモール。お土産に！<br><a href="https://maps.google.com/?q=Forum+Shops+Caesars+Palace+Las+Vegas" target="_blank" style="color:var(--purple);font-size:0.72rem;">📍 マップ</a></div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- CURRENCY / 家計簿 -->
+<section id="currency">
+  <div class="section-header">
+    <span class="section-tag">💰 BUDGET</span>
+    <h2 class="section-title">円換算・家計簿</h2>
+  </div>
+
+  <div class="currency-section">
+
+    <!-- Calculator -->
+    <div class="calc-container">
+      <div class="calc-title">💱 ドル → 円 換算機</div>
+      <div class="calc-input-row">
+        <div style="flex:1; min-width:120px;">
+          <div style="font-size:0.65rem; opacity:0.6; margin-bottom:4px; letter-spacing:0.1em;">USD $</div>
+          <input type="number" class="calc-field" id="usdInput" placeholder="0.00" oninput="convertCurrency()">
+        </div>
+        <div class="calc-arrow">→</div>
+        <div class="calc-result" style="flex:1; min-width:120px;">
+          <div class="calc-result-label">JPY ¥</div>
+          <div class="calc-result-value" id="jpyResult">0</div>
+        </div>
+      </div>
+      <div class="calc-rate" id="rateDisplay">レートを読み込み中…</div>
+      <div style="text-align:center; margin-top:1rem;">
+        <button onclick="addJpyToExpense()" style="background:rgba(255,255,255,0.2); border:1px solid rgba(255,255,255,0.5); color:white; border-radius:12px; padding:10px 28px; font-size:0.88rem; font-weight:600; cursor:pointer; font-family:'Noto Sans JP',sans-serif; letter-spacing:0.05em; transition:all 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.35)'" onmouseout="this.style.background='rgba(255,255,255,0.2)'">＋ 追加（円を家計簿に入力）</button>
+      </div>
+    </div>
+
+    <!-- Expense Summary -->
+    <div class="expense-summary" id="expenseSummary" style="grid-template-columns: 1fr;">
+      <div class="expense-total-card">
+        <div class="expense-label">合計支出</div>
+        <div class="expense-amount" id="totalAmount">¥0</div>
+      </div>
+    </div>
+
+    <!-- Expense Form -->
+    <div class="expense-form">
+      <h3>💳 支出を追加</h3>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">金額（円）</label>
+          <input type="number" class="form-input" id="expAmount" placeholder="例: 3500">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">カテゴリ</label>
+          <select class="form-select" id="expCategory">
+            <option value="食事">🍽 食事</option>
+            <option value="チケット代">🎤 チケット代</option>
+            <option value="観光費">🗺 観光費</option>
+            <option value="グッズ代">💜 グッズ代</option>
+            <option value="交通費">✈ 交通費</option>
+            <option value="宿泊費">🏨 宿泊費</option>
+            <option value="お土産">🛍 お土産</option>
+            <option value="その他">📋 その他</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">日数</label>
+          <select class="form-select" id="expDay">
+            <option value="1日目 (5/26 出発)">1日目 (5/26 出発)</option>
+            <option value="2日目 (5/27 コンサート)">2日目 (5/27 コンサート)</option>
+            <option value="3日目 (5/28 コンサート)">3日目 (5/28 コンサート)</option>
+            <option value="4日目 (5/29 帰国日)">4日目 (5/29 帰国日)</option>
+            <option value="5日目 (5/30 帰国)">5日目 (5/30 帰国)</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group" style="margin-bottom: 1rem;">
+        <label class="form-label">メモ（任意）</label>
+        <input type="text" class="form-input" id="expMemo" placeholder="例: In-N-Out バーガーランチ">
+      </div>
+      <button class="btn-primary" onclick="addExpense()">OK ✓ 支出を追加</button>
+    </div>
+
+    <!-- Expense Table -->
+    <div class="expense-table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>日付</th>
+            <th>カテゴリ</th>
+            <th>金額</th>
+            <th>メモ</th>
+          </tr>
+        </thead>
+        <tbody id="expenseTableBody">
+          <tr>
+            <td colspan="5" style="text-align:center; color:var(--text-light); padding: 2rem;">まだ支出がありません。追加してください 💜</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="section-divider"></div>
+
+<!-- MAP -->
+<section id="map" class="map-section">
+  <div class="section-header">
+    <span class="section-tag">📍 MAP</span>
+    <h2 class="section-title">ラスベガス マップ</h2>
+  </div>
+
+  <div class="map-container">
+    <iframe
+      class="map-iframe"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52523.72048929!2d-115.21!3d36.12!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80beb782a4f57dd1%3A0x3accd5e6d5b379a3!2sLas%20Vegas%2C%20NV%2C%20USA!5e0!3m2!1sja!2sjp!4v1680000000000!5m2!1sja!2sjp"
+      allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+    <div class="map-pins">
+      <div class="map-pin-item">
+        <div class="pin-icon concert">🏟</div>
+        <div class="pin-info">
+          <div class="pin-name">Allegiant Stadium</div>
+          <div class="pin-address">3333 Al Davis Way, Las Vegas</div>
+        </div>
+      </div>
+      <div class="map-pin-item">
+        <div class="pin-icon hotel">🏨</div>
+        <div class="pin-info">
+          <div class="pin-name">Gold Coast Hotel & Casino</div>
+          <div class="pin-address">4000 W Flamingo Rd, Las Vegas</div>
+        </div>
+      </div>
+      <div class="map-pin-item">
+        <div class="pin-icon airport">✈</div>
+        <div class="pin-info">
+          <div class="pin-name">Harry Reid Intl Airport (LAS)</div>
+          <div class="pin-address">5757 Wayne Newton Blvd</div>
+        </div>
+      </div>
+      <div class="map-pin-item">
+        <div class="pin-icon restaurant">🎰</div>
+        <div class="pin-info">
+          <div class="pin-name">Las Vegas Strip</div>
+          <div class="pin-address">Las Vegas Blvd S, Las Vegas</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- TIMEZONE -->
+<section id="timezone">
+  <div class="section-header">
+    <span class="section-tag">🕐 TIMEZONE</span>
+    <h2 class="section-title">時差について</h2>
+  </div>
+
+  <div class="timezone-display">
+    <div class="tz-card">
+      <div class="tz-flag">🇯🇵</div>
+      <div class="tz-city">TOKYO, JAPAN</div>
+      <div class="tz-time" id="tokyoTime">--:--</div>
+      <div class="tz-date" id="tokyoDate">---</div>
+    </div>
+    <div class="tz-card">
+      <div class="tz-flag">🇺🇸</div>
+      <div class="tz-city">LAS VEGAS, PDT</div>
+      <div class="tz-time" id="lvTime">--:--</div>
+      <div class="tz-date" id="lvDate">---</div>
+    </div>
+  </div>
+
+  <div class="tz-diff">
+    <div class="tz-diff-num">-16時間</div>
+    <div class="tz-diff-label">ラスベガスは東京より16時間遅れています（PDT: UTC-7、日本: UTC+9）</div>
+  </div>
+
+  <div style="margin-top: 1.5rem; background: white; border-radius: 16px; border: 1px solid var(--border); padding: 1.25rem; box-shadow: var(--shadow);">
+    <h4 style="font-size:0.88rem; font-weight:700; color:var(--purple-dark); margin-bottom:1rem;">📊 時間変換表</h4>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.5rem; font-size:0.82rem;">
+      <div style="display:flex; justify-content:space-between; padding:6px 10px; background:var(--lavender-pale); border-radius:8px;"><span>東京 8:00</span><span style="color:var(--purple-dark); font-weight:600;">LV 前日 16:00</span></div>
+      <div style="display:flex; justify-content:space-between; padding:6px 10px; background:var(--lavender-pale); border-radius:8px;"><span>東京 12:00</span><span style="color:var(--purple-dark); font-weight:600;">LV 前日 20:00</span></div>
+      <div style="display:flex; justify-content:space-between; padding:6px 10px; background:var(--lavender-pale); border-radius:8px;"><span>LV 20:00（開演）</span><span style="color:var(--purple-dark); font-weight:600;">東京 翌日 12:00</span></div>
+      <div style="display:flex; justify-content:space-between; padding:6px 10px; background:var(--lavender-pale); border-radius:8px;"><span>LV 7:00 朝</span><span style="color:var(--purple-dark); font-weight:600;">東京 23:00</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- TROUBLE -->
+<section id="trouble">
+  <div class="section-header">
+    <span class="section-tag">🆘 TROUBLE SHOOTING</span>
+    <h2 class="section-title">トラブル対策</h2>
+  </div>
+
+  <div class="trouble-grid">
+    <div class="trouble-card">
+      <h4>🚨 緊急連絡先</h4>
+      <div class="emergency-nums">
+        <div class="emergency-num"><span>アメリカ緊急（警察・救急）</span><span class="num">911</span></div>
+        <div class="emergency-num"><span>在ロサンゼルス日本領事館</span><span class="num">+1-213-617-6700</span></div>
+        <div class="emergency-num"><span>旅行保険緊急連絡先</span><span class="num">（保険証を確認）</span></div>
+        <div class="emergency-num"><span>ホテルフロント</span><span class="num">Gold Coast 直通</span></div>
+      </div>
+    </div>
+    <div class="trouble-card">
+      <h4>💳 カード・お金のトラブル</h4>
+      <p>・カードを紛失したらすぐに発行会社に連絡して止める<br>・現金は分散して持つ（財布・スーツケース）<br>・海外利用通知設定をONにしておく<br>・クレジットカード緊急連絡先をメモしておく<br>・VISA/Mastercard を複数枚持参推奨</p>
+    </div>
+    <div class="trouble-card">
+      <h4>📱 スマホ・通信トラブル</h4>
+      <p>・渡航前に国際ローミング or 現地SIMを用意<br>・充電バッテリーを必ず携帯<br>・重要情報はスクショで保存してオフラインで見られるように<br>・ホテルのWi-Fiを活用<br>・Google Mapsのオフラインマップをダウンロード</p>
+    </div>
+    <div class="trouble-card">
+      <h4>🏥 体調不良・怪我</h4>
+      <p>・旅行保険に必ず加入（医療費は非常に高い）<br>・保険証・パスポートは常に持参<br>・常備薬を持参（市販薬は英語表記で分かりにくい）<br>・ホテルにドクターコール可能<br>・緊急の場合は迷わず911</p>
+    </div>
+    <div class="trouble-card">
+      <h4>🧳 盗難・紛失</h4>
+      <p>・パスポートは常にホテルの金庫に保管<br>・財布は前ポケット or ジッパー付きバッグへ<br>・貴重品は分散して持つ<br>・紛失したらまず警察に届出（保険請求に必要）<br>・パスポートコピーを別保管</p>
+    </div>
+    <div class="trouble-card">
+      <h4>✈ フライトのトラブル</h4>
+      <p>・遅延・欠航はアプリ通知をONにしておく<br>・乗り継ぎは余裕を持ったスケジュールで<br>・Trip.comのカスタマーサポートに連絡<br>・旅行保険の遅延補償を確認<br>・航空会社のアプリをダウンロードしておく</p>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- OUTFIT -->
+<section id="outfit">
+  <div class="section-header">
+    <span class="section-tag">👗 OUTFIT</span>
+    <h2 class="section-title">コーデ計画</h2>
+  </div>
+
+  <div class="outfit-grid">
+    <div class="outfit-card">
+      <div class="outfit-day">Day 1 — 5/26 出発日</div>
+      <div class="outfit-body">
+        <div class="outfit-theme">✈ 快適な旅コーデ</div>
+        <ul class="outfit-items">
+          <li>動きやすいリブパンツ or ワイドパンツ</li>
+          <li>ゆったりしたトップス</li>
+          <li>機内温度対策のカーディガン or パーカー</li>
+          <li>スニーカー（歩きやすいもの）</li>
+          <li>大きめトートバッグ</li>
+        </ul>
+        <div class="outfit-colors">
+          <div class="color-dot" style="background:#c9b8e8;"></div>
+          <div class="color-dot" style="background:#f5f5f5;"></div>
+          <div class="color-dot" style="background:#e8e0d0;"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="outfit-card">
+      <div class="outfit-day concert">Day 2 — 5/27 💜 コンサート Day 1</div>
+      <div class="outfit-body">
+        <div class="outfit-theme">💜 ARMY コンサートコーデ</div>
+        <ul class="outfit-items">
+          <li>BTS / ARMY テーマの服（紫・黒・白）</li>
+          <li>推しのアイコン入りアイテム</li>
+          <li>動きやすいスニーカー</li>
+          <li>クリアバッグ（会場規定！）</li>
+          <li>ARMY BOMB・うちわ・ペンライト</li>
+          <li>ヘアアレンジで可愛く！</li>
+        </ul>
+        <div class="outfit-colors">
+          <div class="color-dot" style="background:#6b4fa0;"></div>
+          <div class="color-dot" style="background:#c9b8e8;"></div>
+          <div class="color-dot" style="background:#1a1a2e;"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="outfit-card">
+      <div class="outfit-day concert">Day 3 — 5/28 💜 コンサート Day 2</div>
+      <div class="outfit-body">
+        <div class="outfit-theme">💜 2日目コーデ（テーマ変え）</div>
+        <ul class="outfit-items">
+          <li>推しメンのカラーを取り入れたコーデ</li>
+          <li>ミニスカート or パンツスタイル</li>
+          <li>グリッター・スパンコール系でキラキラ</li>
+          <li>コンサートグッズをアクセントに</li>
+          <li>記念撮影映えを意識して！</li>
+        </ul>
+        <div class="outfit-colors">
+          <div class="color-dot" style="background:#9b72cf;"></div>
+          <div class="color-dot" style="background:#d4af6a;"></div>
+          <div class="color-dot" style="background:#e8d0f0;"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="outfit-card">
+      <div class="outfit-day">Day 4 — 5/29 帰国移動日</div>
+      <div class="outfit-body">
+        <div class="outfit-theme">✈ 早朝出発・長距離移動コーデ</div>
+        <ul class="outfit-items">
+          <li>早朝チェックアウトなので前日に準備を</li>
+          <li>リラックスパンツ + カーディガン</li>
+          <li>スニーカー（脱ぎ履きしやすいもの）</li>
+          <li>ネックピロー・アイマスク持参</li>
+          <li>機内乾燥対策のリップ・ハンドクリーム</li>
+        </ul>
+        <div class="outfit-colors">
+          <div class="color-dot" style="background:#c9b8e8;"></div>
+          <div class="color-dot" style="background:#e8e8e8;"></div>
+          <div class="color-dot" style="background:#b8d0e8;"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="outfit-card">
+      <div class="outfit-day">Day 5 — 5/30 帰国着</div>
+      <div class="outfit-body">
+        <div class="outfit-theme">🇯🇵 成田到着・帰宅コーデ</div>
+        <ul class="outfit-items">
+          <li>シアトル→成田の長距離便明け</li>
+          <li>楽なセットアップ or ワンピース</li>
+          <li>お土産でパンパンなスーツケースも計算に入れて</li>
+          <li>到着後そのまま帰宅できる格好で</li>
+        </ul>
+        <div class="outfit-colors">
+          <div class="color-dot" style="background:#e8dff0;"></div>
+          <div class="color-dot" style="background:#d0e8d0;"></div>
+          <div class="color-dot" style="background:#f0e8d0;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="weather-link" style="margin-top:1.5rem; text-align:center;">
+    <a href="https://weather.yahoo.co.jp/weather/world/US/72386/" target="_blank"
+      style="display:inline-flex; align-items:center; gap:8px; background:linear-gradient(135deg, var(--lavender-light), var(--lavender-pale)); border:1px solid var(--border); border-radius:24px; padding:10px 24px; font-size:0.85rem; font-weight:600; color:var(--purple-dark); text-decoration:none; box-shadow:var(--shadow);">
+      🌤 ラスベガスの天気予報を確認する（Yahoo!天気）
+    </a>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">BTS LAS VEGAS TOUR 2026 💜</div>
+  <p>かなこ・りか・えり 3人旅のしおり</p>
+  <p style="margin-top:6px; font-size:0.68rem; opacity:0.4;">💜 ARMY FOREVER 💜</p>
+</footer>
+
+<script>
+// ──────────── PACKING LIST DATA ────────────
+const packingData = [
+  {
+    cat: '📄 書類・重要品',
+    items: ['パスポート（有効期限確認！）', 'ESTA（入国許可）印刷 or スクショ', 'フライトチケット', 'ホテル予約確認書', 'コンサートチケット', '海外旅行保険証', 'クレジットカード（複数枚）', '現金（USD）']
+  },
+  {
+    cat: '👗 衣類',
+    items: ['普段着（上5枚・下4枚）', 'コンサートコーデ×2日分', '下着・靴下', 'パジャマ', '機内用カーディガン', 'スニーカー', 'サンダル', 'サングラス', '帽子']
+  },
+  {
+    cat: '🧴 美容・衛生',
+    items: ['スキンケアセット（液体100ml以内）', 'メイクポーチ', '日焼け止め（必須！）', 'リップ・ハンドクリーム', 'シャンプー（ホテル確認）', '生理用品', '常備薬', 'マスク', 'コンタクト用品']
+  },
+  {
+    cat: '📱 電子機器',
+    items: ['スマートフォン', 'モバイルバッテリー（機内持込！）', 'イヤホン', 'カメラ（一眼はコンサート不可）', 'USBケーブル', '変換プラグ（A型で🇺🇸はOK）', 'SIM or eSIM']
+  },
+  {
+    cat: '🎤 コンサート用品',
+    items: ['ARMY BOMB（ペンライト）', 'クリアバッグ（会場必須！）', 'うちわ', 'ペンパレード・グッズ', '推しのスローガン', '双眼鏡（任意）']
+  },
+  {
+    cat: '🧳 その他',
+    items: ['スーツケース + 南京錠', 'エコバッグ（お土産用）', 'ジップロック各種', 'ティッシュ・ウェットティッシュ', 'エコバッグ', '折りたたみ傘', 'ネックピロー（機内用）', 'アイマスク']
+  }
+];
+
+// ──────────── TODO DATA ────────────
+const todoData = [
+  {
+    cat: '📅 1ヶ月前まで',
+    items: [
+      { text: 'ESTAを取得・更新する', urgent: true },
+      { text: 'パスポート有効期限確認（6ヶ月以上）', urgent: true },
+      { text: '海外旅行保険に加入する', urgent: true },
+      { text: 'クレジットカードの海外利用設定をON', urgent: false },
+      { text: '海外SIM or eSIMを手配', urgent: false },
+    ]
+  },
+  {
+    cat: '📅 2週間前まで',
+    items: [
+      { text: 'USD両替をする（目安：$300〜500）', urgent: false },
+      { text: 'Uber / Lyftアプリをインストール・設定', urgent: false },
+      { text: 'コンサートチケット電子化確認', urgent: true },
+      { text: 'ARMY BOMBのBluetoothペアリング確認', urgent: false },
+      { text: 'スーツケースの重量確認（30kg以内）', urgent: false },
+    ]
+  },
+  {
+    cat: '📅 前日',
+    items: [
+      { text: '荷物の最終確認・パッキング', urgent: false },
+      { text: 'チェックイン手続き（アラスカ航空）', urgent: true },
+      { text: '旅行保険の緊急連絡先をメモ', urgent: false },
+      { text: '充電バッテリー・スマホを満充電', urgent: false },
+      { text: 'ホテル確認書・チケットをスクショ保存', urgent: false },
+    ]
+  },
+  {
+    cat: '🎤 コンサート前',
+    items: [
+      { text: 'クリアバッグに荷物を移す', urgent: true },
+      { text: 'チケット・パスポートを持ったか確認', urgent: true },
+      { text: 'ARMY BOMBの充電確認', urgent: false },
+      { text: '会場周辺のUberピックアップポイント確認', urgent: false },
+      { text: '座席番号・入場ゲートを確認', urgent: false },
+    ]
+  }
+];
+
+// ──────────── RENDER PACKING ────────────
+function renderPacking() {
+  const grid = document.getElementById('packingGrid');
+  const saved = JSON.parse(localStorage.getItem('packing') || '{}');
+
+  grid.innerHTML = packingData.map((cat, ci) => `
+    <div class="pack-category">
+      <h4>${cat.cat}</h4>
+      ${cat.items.map((item, ii) => {
+        const key = `${ci}-${ii}`;
+        const checked = saved[key] ? 'checked' : '';
+        return `<div class="pack-item ${checked}" onclick="togglePack(this, '${key}')">
+          <div class="pack-check"></div>
+          <span class="pack-label">${item}</span>
+        </div>`;
+      }).join('')}
+    </div>
+  `).join('');
+}
+
+function togglePack(el, key) {
+  el.classList.toggle('checked');
+  const saved = JSON.parse(localStorage.getItem('packing') || '{}');
+  if (el.classList.contains('checked')) {
+    saved[key] = true;
+  } else {
+    delete saved[key];
+  }
+  localStorage.setItem('packing', JSON.stringify(saved));
+}
+
+// ──────────── RENDER TODO ────────────
+function renderTodo() {
+  const grid = document.getElementById('todoGrid');
+  const saved = JSON.parse(localStorage.getItem('todo') || '{}');
+
+  grid.innerHTML = todoData.map((cat, ci) => `
+    <div class="todo-category">
+      <h4>${cat.cat}</h4>
+      ${cat.items.map((item, ii) => {
+        const key = `${ci}-${ii}`;
+        const done = saved[key] ? 'done' : '';
+        return `<div class="todo-item ${done}" onclick="toggleTodo(this, '${key}')">
+          <div class="todo-check"></div>
+          <span class="todo-text">${item.text}</span>
+          ${item.urgent ? '<span class="todo-priority urgent">急</span>' : ''}
+        </div>`;
+      }).join('')}
+    </div>
+  `).join('');
+}
+
+function toggleTodo(el, key) {
+  el.classList.toggle('done');
+  const saved = JSON.parse(localStorage.getItem('todo') || '{}');
+  if (el.classList.contains('done')) {
+    saved[key] = true;
+  } else {
+    delete saved[key];
+  }
+  localStorage.setItem('todo', JSON.stringify(saved));
+}
+
+// ──────────── CURRENCY ────────────
+let usdRate = 155; // fallback rate
+
+async function fetchRate() {
+  try {
+    const res = await fetch('https://open.er-api.com/v6/latest/USD');
+    const data = await res.json();
+    if (data && data.rates && data.rates.JPY) {
+      usdRate = data.rates.JPY;
+      document.getElementById('rateDisplay').textContent = `現在のレート: $1 = ¥${usdRate.toFixed(2)}（リアルタイム）`;
+    }
+  } catch(e) {
+    document.getElementById('rateDisplay').textContent = `レート: $1 ≈ ¥${usdRate}（参考値）`;
+  }
+}
+
+function convertCurrency() {
+  const usd = parseFloat(document.getElementById('usdInput').value) || 0;
+  const jpy = Math.round(usd * usdRate);
+  document.getElementById('jpyResult').textContent = '¥' + jpy.toLocaleString('ja-JP');
+}
+
+// ──────────── EXPENSES ────────────
+let expenses = JSON.parse(localStorage.getItem('expenses') || '[]');
+
+function addExpense() {
+  const amount = parseFloat(document.getElementById('expAmount').value);
+  if (!amount || amount <= 0) {
+    alert('金額を入力してください');
+    return;
+  }
+  const expense = {
+    amount,
+    category: document.getElementById('expCategory').value,
+    day: document.getElementById('expDay').value,
+    memo: document.getElementById('expMemo').value || ''
+  };
+  expenses.push(expense);
+  localStorage.setItem('expenses', JSON.stringify(expenses));
+  document.getElementById('expAmount').value = '';
+  document.getElementById('expMemo').value = '';
+  renderExpenses();
+}
+
+function addJpyToExpense() {
+  const jpyText = document.getElementById('jpyResult').textContent.replace(/[¥,]/g, '');
+  const jpy = parseInt(jpyText, 10);
+  if (!jpy || jpy <= 0) {
+    alert('先にドル金額を入力してください');
+    return;
+  }
+  document.getElementById('expAmount').value = jpy;
+  document.getElementById('expAmount').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  document.getElementById('expAmount').focus();
+}
+
+function renderExpenses() {
+  const tbody = document.getElementById('expenseTableBody');
+  const totalEl = document.getElementById('totalAmount');
+
+  if (!expenses.length) {
+    tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; color:var(--text-light); padding: 2rem;">まだ支出がありません。追加してください 💜</td></tr>';
+    totalEl.textContent = '¥0';
+    return;
+  }
+
+  let total = 0;
+
+  tbody.innerHTML = expenses.map((e, i) => {
+    total += e.amount;
+    return `<tr>
+      <td style="font-size:0.75rem;">${e.day}</td>
+      <td style="font-size:0.78rem;">${e.category}</td>
+      <td style="font-weight:600; color:var(--purple-dark);">¥${e.amount.toLocaleString()}</td>
+      <td style="font-size:0.78rem; color:var(--text-light);">${e.memo}</td>
+    </tr>`;
+  }).join('');
+
+  totalEl.textContent = '¥' + total.toLocaleString();
+}
+
+// ──────────── TIMEZONE CLOCK ────────────
+function updateClocks() {
+  const now = new Date();
+  const tokyoStr = now.toLocaleString('ja-JP', { timeZone: 'Asia/Tokyo', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false });
+  const tokyoDateStr = now.toLocaleString('ja-JP', { timeZone: 'Asia/Tokyo', month: 'long', day: 'numeric', weekday: 'short' });
+  const lvStr = now.toLocaleString('en-US', { timeZone: 'America/Los_Angeles', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false });
+  const lvDateStr = now.toLocaleString('ja-JP', { timeZone: 'America/Los_Angeles', month: 'long', day: 'numeric', weekday: 'short' });
+
+  document.getElementById('tokyoTime').textContent = tokyoStr;
+  document.getElementById('tokyoDate').textContent = tokyoDateStr;
+  document.getElementById('lvTime').textContent = lvStr;
+  document.getElementById('lvDate').textContent = lvDateStr;
+}
+
+// ──────────── SCROLLSPY ────────────
+function setupScrollSpy() {
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + entry.target.id) {
+            link.classList.add('active');
+          }
+        });
+      }
+    });
+  }, { threshold: 0.3 });
+
+  sections.forEach(s => observer.observe(s));
+}
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+
+
+// ──────────── INIT ────────────
+renderPacking();
+renderTodo();
+renderExpenses();
+fetchRate();
+updateClocks();
+setInterval(updateClocks, 1000);
+setupScrollSpy();
+</script>
+</body>
+</html>
