@@ -1468,6 +1468,7 @@
       <li><a href="#trouble" onclick="scrollTo('trouble')">トラブル</a></li>
       <li><a href="#outfit" onclick="scrollTo('outfit')">コーデ</a></li>
       <li><a href="#weather-link" onclick="scrollTo('weather-link')">天気</a></li>
+      <li><a href="#useful-links" onclick="scrollTo('useful-links')">リンク</a></li>
     </ul>
   </div>
 </nav>
@@ -2312,6 +2313,7 @@
             <th>カテゴリ</th>
             <th>金額</th>
             <th>メモ</th>
+            <th></th>
           </tr>
         </thead>
         <tbody id="expenseTableBody">
@@ -2338,7 +2340,7 @@
   <div class="map-container">
     <iframe
       class="map-iframe"
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52523.72048929!2d-115.21!3d36.12!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80beb782a4f57dd1%3A0x3accd5e6d5b379a3!2sLas%20Vegas%2C%20NV%2C%20USA!5e0!3m2!1sja!2sjp!4v1680000000000!5m2!1sja!2sjp"
+      src="https://www.google.com/maps/d/embed?mid=1ZD0lsPF9uxKoQ-mbHBzUdKvLHy59VlM"
       allowfullscreen="" loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"
     ></iframe>
@@ -2353,8 +2355,8 @@
       <div class="map-pin-item">
         <div class="pin-icon hotel">🏨</div>
         <div class="pin-info">
-          <div class="pin-name">Gold Coast Hotel & Casino</div>
-          <div class="pin-address">4000 W Flamingo Rd, Las Vegas</div>
+          <div class="pin-name">Palms Casino Resort</div>
+          <div class="pin-address">4321 W Flamingo Rd, Las Vegas</div>
         </div>
       </div>
       <div class="map-pin-item">
@@ -2569,6 +2571,28 @@
       🌤 ラスベガスの天気予報を確認する（Yahoo!天気）
     </a>
   </div>
+
+  <div id="useful-links" style="margin-top:2rem;">
+    <h3 style="font-size:0.85rem; font-weight:700; color:var(--text-light); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:1rem;">🔗 チケット購入リンク</h3>
+    <div style="display:flex; flex-direction:column; gap:0.75rem;">
+      <a href="https://www.ticketmaster.com/bts-tickets/artist/2110227" target="_blank"
+        style="display:flex; align-items:center; justify-content:space-between; background:white; border:1px solid var(--border); border-radius:14px; padding:14px 18px; text-decoration:none; box-shadow:var(--shadow);">
+        <div>
+          <div style="font-weight:700; color:var(--text-dark); font-size:0.9rem;">🎟 Ticketmaster</div>
+          <div style="font-size:0.72rem; color:var(--text-light); margin-top:2px;">ticketmaster.com</div>
+        </div>
+        <span style="font-size:0.75rem; color:var(--purple-dark); font-weight:600;">開く →</span>
+      </a>
+      <a href="https://www.stubhub.com/jp/bts-tickets/performer/1503185?agqi=c4dca641-ea4c-4549-9082-98c3c788ff93&agi=stubhub&agut=b85dbd85-e0b3-431e-9997-f621294dc2e7" target="_blank"
+        style="display:flex; align-items:center; justify-content:space-between; background:white; border:1px solid var(--border); border-radius:14px; padding:14px 18px; text-decoration:none; box-shadow:var(--shadow);">
+        <div>
+          <div style="font-weight:700; color:var(--text-dark); font-size:0.9rem;">🎟 StubHub</div>
+          <div style="font-size:0.72rem; color:var(--text-light); margin-top:2px;">stubhub.com</div>
+        </div>
+        <span style="font-size:0.75rem; color:var(--purple-dark); font-weight:600;">開く →</span>
+      </a>
+    </div>
+  </div>
 </section>
 
 <div class="section-divider"></div>
@@ -2772,12 +2796,19 @@ function addJpyToExpense() {
   document.getElementById('expAmount').focus();
 }
 
+function deleteExpense(index) {
+  if (!confirm('この項目を削除しますか？')) return;
+  expenses.splice(index, 1);
+  localStorage.setItem('expenses', JSON.stringify(expenses));
+  renderExpenses();
+}
+
 function renderExpenses() {
   const tbody = document.getElementById('expenseTableBody');
   const totalEl = document.getElementById('totalAmount');
 
   if (!expenses.length) {
-    tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; color:var(--text-light); padding: 2rem;">まだ支出がありません。追加してください 💜</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="5" style="text-align:center; color:var(--text-light); padding: 2rem;">まだ支出がありません。追加してください 💜</td></tr>';
     totalEl.textContent = '¥0';
     return;
   }
@@ -2791,6 +2822,7 @@ function renderExpenses() {
       <td style="font-size:0.78rem;">${e.category}</td>
       <td style="font-weight:600; color:var(--purple-dark);">¥${e.amount.toLocaleString()}</td>
       <td style="font-size:0.78rem; color:var(--text-light);">${e.memo}</td>
+      <td><button onclick="deleteExpense(${i})" style="background:none; border:1px solid #e0b0b0; border-radius:8px; color:#c0392b; font-size:0.7rem; padding:3px 8px; cursor:pointer;">削除</button></td>
     </tr>`;
   }).join('');
 
