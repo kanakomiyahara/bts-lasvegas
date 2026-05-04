@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BTS LAS VEGAS TOUR 2026 💜 しおり</title>
+<title>かなこ りか BTS LAS VEGAS TOUR 2026 💜 しおり</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
@@ -745,55 +745,69 @@
   /* ───────────── RESTAURANTS ───────────── */
   .restaurant-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 0.75rem;
   }
 
   .restaurant-card {
     background: white;
-    border-radius: 20px;
+    border-radius: 14px;
     border: 1px solid var(--border);
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: all 0.3s;
+    display: flex;
+    align-items: stretch;
   }
 
   .restaurant-card:hover {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
     box-shadow: var(--shadow-hover);
   }
 
   .restaurant-img {
-    height: 120px;
+    width: 56px;
+    min-width: 56px;
     background: linear-gradient(135deg, var(--lavender-light), var(--lavender-pale));
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 3rem;
+    font-size: 1.6rem;
+    flex-shrink: 0;
   }
 
-  .restaurant-body { padding: 1.25rem; }
+  .restaurant-body {
+    padding: 0.75rem 1rem;
+    flex: 1;
+    min-width: 0;
+  }
 
   .restaurant-name {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 700;
     color: var(--text-dark);
-    margin-bottom: 4px;
+    margin-bottom: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .restaurant-type {
-    font-size: 0.72rem;
+    font-size: 0.68rem;
     color: var(--text-light);
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.4rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .restaurant-note {
-    font-size: 0.78rem;
+    font-size: 0.74rem;
     color: var(--purple-dark);
     background: var(--lavender-pale);
-    padding: 8px 12px;
-    border-radius: 10px;
-    line-height: 1.5;
+    padding: 5px 10px;
+    border-radius: 8px;
+    line-height: 1.4;
   }
 
   .bts-badge {
@@ -806,23 +820,45 @@
     border-radius: 10px;
     font-size: 0.65rem;
     font-weight: 600;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
+  }
+
+  .map-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    margin-top: 6px;
+    font-size: 0.7rem;
+    color: var(--purple-dark);
+    text-decoration: none;
+    background: var(--lavender-light);
+    padding: 3px 9px;
+    border-radius: 8px;
+    font-weight: 600;
+  }
+
+  @media (max-width: 480px) {
+    .restaurant-grid {
+      grid-template-columns: 1fr;
+    }
   }
 
   /* ───────────── SIGHTSEEING ───────────── */
   .sightseeing-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.75rem;
   }
 
   .sight-card {
     background: white;
-    border-radius: 16px;
+    border-radius: 12px;
     border: 1px solid var(--border);
-    padding: 1.25rem;
+    padding: 0.75rem 1rem;
     box-shadow: var(--shadow);
-    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
     transition: all 0.3s;
   }
 
@@ -831,9 +867,10 @@
     box-shadow: var(--shadow-hover);
   }
 
-  .sight-emoji { font-size: 2.5rem; margin-bottom: 0.5rem; display: block; }
-  .sight-name { font-size: 0.9rem; font-weight: 700; color: var(--text-dark); margin-bottom: 4px; }
-  .sight-desc { font-size: 0.75rem; color: var(--text-light); line-height: 1.5; }
+  .sight-emoji { font-size: 1.5rem; flex-shrink: 0; display: block; }
+  .sight-info { flex: 1; min-width: 0; }
+  .sight-name { font-size: 0.82rem; font-weight: 700; color: var(--text-dark); margin-bottom: 2px; }
+  .sight-desc { font-size: 0.7rem; color: var(--text-light); line-height: 1.4; }
 
   /* ───────────── MAP ───────────── */
   .map-section .map-container {
@@ -1459,15 +1496,14 @@
       <li><a href="#flight" onclick="scrollTo('flight')">フライト</a></li>
       <li><a href="#concert" onclick="scrollTo('concert')">コンサート</a></li>
       <li><a href="#packing" onclick="scrollTo('packing')">持ち物</a></li>
-      <li><a href="#todo" onclick="scrollTo('todo')">やること</a></li>
       <li><a href="#restaurants" onclick="scrollTo('restaurants')">聖地</a></li>
       <li><a href="#sightseeing" onclick="scrollTo('sightseeing')">観光</a></li>
       <li><a href="#currency" onclick="scrollTo('currency')">家計簿</a></li>
-      <li><a href="#ticket" onclick="scrollTo('ticket')">チケット</a></li>
       <li><a href="#map" onclick="scrollTo('map')">マップ</a></li>
       <li><a href="#timezone" onclick="scrollTo('timezone')">時差</a></li>
       <li><a href="#trouble" onclick="scrollTo('trouble')">トラブル</a></li>
-      <li><a href="#outfit" onclick="scrollTo('outfit')">コーデ</a></li>
+      <li><a href="#weather" onclick="scrollTo('weather')">天気</a></li>
+      <li><a href="#links" onclick="scrollTo('links')">リンク</a></li>
     </ul>
   </div>
 </nav>
@@ -2184,7 +2220,7 @@
         <div class="restaurant-name">Gordon Ramsay Steak</div>
         <div class="restaurant-type">ステーキ・アメリカン｜Paris Las Vegas</div>
         <div class="restaurant-note">BTS メンバーが訪れたと話題のゴードンラムゼイのレストラン。ラスベガスを代表するステーキハウス。要予約！</div>
-        <a href="https://maps.google.com/?q=Gordon+Ramsay+Steak+Paris+Las+Vegas" target="_blank" style="display:inline-flex;align-items:center;gap:4px;margin-top:10px;font-size:0.75rem;color:var(--purple-dark);text-decoration:none;background:var(--lavender-light);padding:5px 12px;border-radius:10px;font-weight:600;">📍 Googleマップで見る</a>
+        <a href="https://maps.google.com/?q=Gordon+Ramsay+Steak+Paris+Las+Vegas" target="_blank" class="map-link">📍 Googleマップで見る</a>
       </div>
     </div>
     <div class="restaurant-card">
@@ -2194,7 +2230,7 @@
         <div class="restaurant-name">Nobu Las Vegas</div>
         <div class="restaurant-type">日本食・フュージョン｜Caesars Palace</div>
         <div class="restaurant-note">世界的に有名な和食×南米フュージョン。BTSメンバーがよく食事する和食系レストラン。事前予約必須！</div>
-        <a href="https://maps.google.com/?q=Nobu+Restaurant+Caesars+Palace+Las+Vegas" target="_blank" style="display:inline-flex;align-items:center;gap:4px;margin-top:10px;font-size:0.75rem;color:var(--purple-dark);text-decoration:none;background:var(--lavender-light);padding:5px 12px;border-radius:10px;font-weight:600;">📍 Googleマップで見る</a>
+        <a href="https://maps.google.com/?q=Nobu+Restaurant+Caesars+Palace+Las+Vegas" target="_blank" class="map-link">📍 Googleマップで見る</a>
       </div>
     </div>
     <div class="restaurant-card">
@@ -2204,7 +2240,7 @@
         <div class="restaurant-name">In-N-Out Burger</div>
         <div class="restaurant-type">バーガー｜ラスベガス各所</div>
         <div class="restaurant-note">西海岸といえばここ！BTSも大好きなイン・アンド・アウトバーガー。アニマルスタイルがおすすめ。</div>
-        <a href="https://maps.google.com/?q=In-N-Out+Burger+Las+Vegas" target="_blank" style="display:inline-flex;align-items:center;gap:4px;margin-top:10px;font-size:0.75rem;color:var(--purple-dark);text-decoration:none;background:var(--lavender-light);padding:5px 12px;border-radius:10px;font-weight:600;">📍 Googleマップで見る</a>
+        <a href="https://maps.google.com/?q=In-N-Out+Burger+Las+Vegas" target="_blank" class="map-link">📍 Googleマップで見る</a>
       </div>
     </div>
     <div class="restaurant-card">
@@ -2214,7 +2250,7 @@
         <div class="restaurant-name">ウィン・ラスベガス</div>
         <div class="restaurant-type">BTS前回LV滞在時のホテル｜3131 Las Vegas Blvd S</div>
         <div class="restaurant-note">BTSが前回ラスベガス滞在した聖地ホテル！ロビー・庭園・レストランを見学。宿泊しなくても入れる。</div>
-        <a href="https://maps.google.com/?q=Wynn+Las+Vegas" target="_blank" style="display:inline-flex;align-items:center;gap:4px;margin-top:10px;font-size:0.75rem;color:var(--purple-dark);text-decoration:none;background:var(--lavender-light);padding:5px 12px;border-radius:10px;font-weight:600;">📍 Googleマップで見る</a>
+        <a href="https://maps.google.com/?q=Wynn+Las+Vegas" target="_blank" class="map-link">📍 Googleマップで見る</a>
       </div>
     </div>
     <div class="restaurant-card">
@@ -2224,7 +2260,7 @@
         <div class="restaurant-name">ベラッジオ噴水</div>
         <div class="restaurant-type">噴水ショー・必撮スポット｜3600 Las Vegas Blvd S</div>
         <div class="restaurant-note">噴水前で3人で記念写真 💜 昼間30分おき・夕方以降15分おき開催。夜がベスト！完全無料。</div>
-        <a href="https://maps.google.com/?q=Bellagio+Fountains+Las+Vegas" target="_blank" style="display:inline-flex;align-items:center;gap:4px;margin-top:10px;font-size:0.75rem;color:var(--purple-dark);text-decoration:none;background:var(--lavender-light);padding:5px 12px;border-radius:10px;font-weight:600;">📍 Googleマップで見る</a>
+        <a href="https://maps.google.com/?q=Bellagio+Fountains+Las+Vegas" target="_blank" class="map-link">📍 Googleマップで見る</a>
       </div>
     </div>
     <div class="restaurant-card">
@@ -2233,9 +2269,259 @@
         <div class="restaurant-name">Eggslut</div>
         <div class="restaurant-type">カフェ・サンドイッチ｜The Cosmopolitan</div>
         <div class="restaurant-note">LA発のおしゃれカフェ。インスタ映え抜群のエッグサンドは必食。ラスベガスでも大人気のスポット。</div>
-        <a href="https://maps.google.com/?q=Eggslut+Cosmopolitan+Las+Vegas" target="_blank" style="display:inline-flex;align-items:center;gap:4px;margin-top:10px;font-size:0.75rem;color:var(--purple-dark);text-decoration:none;background:var(--lavender-light);padding:5px 12px;border-radius:10px;font-weight:600;">📍 Googleマップで見る</a>
+        <a href="https://maps.google.com/?q=Eggslut+Cosmopolitan+Las+Vegas" target="_blank" class="map-link">📍 Googleマップで見る</a>
       </div>
     </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- BUDGET RESTAURANTS near hotel -->
+<section id="budget-restaurants">
+  <div class="section-header">
+    <span class="section-tag">🍽 LOCAL EATS</span>
+    <h2 class="section-title">ホテル近郊コスパ◎レストラン</h2>
+    <p style="font-size:0.82rem; color:var(--text-light); margin-top:0.5rem;">Google ★4以上・一人3,000円以内のお店 12選</p>
+  </div>
+
+  <div class="restaurant-grid">
+
+    <div class="restaurant-card">
+      <div class="restaurant-img">🥞</div>
+      <div class="restaurant-body">
+        <div style="display:inline-flex;align-items:center;gap:4px;background:#fff0e0;color:#c0601a;padding:3px 10px;border-radius:10px;font-size:0.65rem;font-weight:600;margin-bottom:8px;">⭐ 4.7 / Polaris St</div>
+        <div class="restaurant-name">Polaris Street Cafe</div>
+        <div class="restaurant-type">朝食・ブランチ｜ホテル近く</div>
+        <div class="restaurant-note">ローカル人気No.1の朝食カフェ。チョリソーブリトーが絶品。リーズナブルで地元民が通う隠れ家。</div>
+        <a href="https://maps.google.com/?q=Polaris+Street+Cafe+Las+Vegas" target="_blank" class="map-link">📍 Googleマップで見る</a>
+      </div>
+    </div>
+
+    <div class="restaurant-card">
+      <div class="restaurant-img">🥐</div>
+      <div class="restaurant-body">
+        <div style="display:inline-flex;align-items:center;gap:4px;background:#fff0e0;color:#c0601a;padding:3px 10px;border-radius:10px;font-size:0.65rem;font-weight:600;margin-bottom:8px;">⭐ 4.6 / Flamingo Rd</div>
+        <div class="restaurant-name">Blueberry Hill Restaurant</div>
+        <div class="restaurant-type">アメリカンダイナー｜W Flamingo Rd</div>
+        <div class="restaurant-note">ホテルから車5分。地元に愛されるファミリーダイナー。パンケーキが特においしくボリューム満点！</div>
+        <a href="https://maps.google.com/?q=Blueberry+Hill+Restaurant+Flamingo+Las+Vegas" target="_blank" class="map-link">📍 Googleマップで見る</a>
+      </div>
+    </div>
+
+    <div class="restaurant-card">
+      <div class="restaurant-img">🍜</div>
+      <div class="restaurant-body">
+        <div style="display:inline-flex;align-items:center;gap:4px;background:#fff0e0;color:#c0601a;padding:3px 10px;border-radius:10px;font-size:0.65rem;font-weight:600;margin-bottom:8px;">⭐ 4.7 / Decatur Blvd</div>
+        <div class="restaurant-name">Yun Noodle and Dumplings</div>
+        <div class="restaurant-type">中華・蘭州牛肉麺｜S Decatur Blvd</div>
+        <div class="restaurant-note">本格蘭州牛肉面が1,500円前後。ラーメン好きARMYに激推し。SNSで話題のローカルグルメ！</div>
+        <a href="https://maps.google.com/?q=Yun+Noodle+and+Dumplings+Las+Vegas" target="_blank" class="map-link">📍 Googleマップで見る</a>
+      </div>
+    </div>
+
+    <div class="restaurant-card">
+      <div class="restaurant-img">🍺</div>
+      <div class="restaurant-body">
+        <div style="display:inline-flex;align-items:center;gap:4px;background:#fff0e0;color:#c0601a;padding:3px 10px;border-radius:10px;font-size:0.65rem;font-weight:600;margin-bottom:8px;">⭐ 4.4 / Koval Ln</div>
+        <div class="restaurant-name">Village Pub & Cafe</div>
+        <div class="restaurant-type">パブ・アメリカン｜Ellis Island Casino</div>
+        <div class="restaurant-note">24時間営業！ステーキ＆エッグ$15以下。ストリップから歩けるコスパ最強スポット。</div>
+        <a href="https://maps.google.com/?q=Village+Pub+Cafe+Ellis+Island+Las+Vegas" target="_blank" class="map-link">📍 Googleマップで見る</a>
+      </div>
+    </div>
+
+    <div class="restaurant-card">
+      <div class="restaurant-img">🌮</div>
+      <div class="restaurant-body">
+        <div style="display:inline-flex;align-items:center;gap:4px;background:#fff0e0;color:#c0601a;padding:3px 10px;border-radius:10px;font-size:0.65rem;font-weight:600;margin-bottom:8px;">⭐ 4.3 / Las Vegas Blvd</div>
+        <div class="restaurant-name">Tacos El Gordo</div>
+        <div class="restaurant-type">本格メキシカンタコス｜ストリップ近く</div>
+        <div class="restaurant-note">ストリップ上で食べられる本場タコス！アドバダが絶品。1個$5前後でお腹いっぱいに。</div>
+        <a href="https://maps.google.com/?q=Tacos+El+Gordo+Las+Vegas+Blvd" target="_blank" class="map-link">📍 Googleマップで見る</a>
+      </div>
+    </div>
+
+    <div class="restaurant-card">
+      <div class="restaurant-img">🍜</div>
+      <div class="restaurant-body">
+        <div style="display:inline-flex;align-items:center;gap:4px;background:#fff0e0;color:#c0601a;padding:3px 10px;border-radius:10px;font-size:0.65rem;font-weight:600;margin-bottom:8px;">⭐ 4.6 / Spring Mountain</div>
+        <div class="restaurant-name">Monta Ramen</div>
+        <div class="restaurant-type">ラーメン・日本食｜Spring Mountain Rd</div>
+        <div class="restaurant-note">ラスベガスのチャイナタウンにある超人気ラーメン。豚骨スープが絶品。旅の疲れに染みる！</div>
+        <a href="https://maps.google.com/?q=Monta+Ramen+Las+Vegas" target="_blank" class="map-link">📍 Googleマップで見る</a>
+      </div>
+    </div>
+
+    <div class="restaurant-card">
+      <div class="restaurant-img">🍣</div>
+      <div class="restaurant-body">
+        <div style="display:inline-flex;align-items:center;gap:4px;background:#fff0e0;color:#c0601a;padding:3px 10px;border-radius:10px;font-size:0.65rem;font-weight:600;margin-bottom:8px;">⭐ 4.7 / Spring Mountain</div>
+        <div class="restaurant-name">Izakaya Go</div>
+        <div class="restaurant-type">居酒屋・寿司｜Spring Mountain Rd</div>
+        <div class="restaurant-note">ラスベガスで本格居酒屋体験！テンプラ弁当が超充実。深夜2時まで営業で〆に最高。</div>
+        <a href="https://maps.google.com/?q=Izakaya+Go+Las+Vegas" target="_blank" class="map-link">📍 Googleマップで見る</a>
+      </div>
+    </div>
+
+    <div class="restaurant-card">
+      <div class="restaurant-img">🍜</div>
+      <div class="restaurant-body">
+        <div style="display:inline-flex;align-items:center;gap:4px;background:#fff0e0;color:#c0601a;padding:3px 10px;border-radius:10px;font-size:0.65rem;font-weight:600;margin-bottom:8px;">⭐ 4.3 / 24h営業</div>
+        <div class="restaurant-name">Shokku Ramen</div>
+        <div class="restaurant-type">ラーメン・アニメ空間｜Spring Mountain Rd</div>
+        <div class="restaurant-note">24時間営業のアニメ居酒屋ラーメン！コンサート後の〆ラーに最高。シニガミラーメンが名物。</div>
+        <a href="https://maps.google.com/?q=Shokku+Ramen+Las+Vegas" target="_blank" class="map-link">📍 Googleマップで見る</a>
+      </div>
+    </div>
+
+    <div class="restaurant-card">
+      <div class="restaurant-img">🥞</div>
+      <div class="restaurant-body">
+        <div style="display:inline-flex;align-items:center;gap:4px;background:#fff0e0;color:#c0601a;padding:3px 10px;border-radius:10px;font-size:0.65rem;font-weight:600;margin-bottom:8px;">⭐ 4.3 / Tuscany Casino</div>
+        <div class="restaurant-name">Marilyn's Cafe</div>
+        <div class="restaurant-type">ダイナー｜Tuscany Casino（Flamingo Rd）</div>
+        <div class="restaurant-note">カジノ内の隠れた名店ダイナー。ストリップから徒歩圏、地元民絶賛の安くて旨いごはん処。</div>
+        <a href="https://maps.google.com/?q=Marilyns+Cafe+Tuscany+Casino+Las+Vegas" target="_blank" class="map-link">📍 Googleマップで見る</a>
+      </div>
+    </div>
+
+    <div class="restaurant-card">
+      <div class="restaurant-img">🌭</div>
+      <div class="restaurant-body">
+        <div style="display:inline-flex;align-items:center;gap:4px;background:#fff0e0;color:#c0601a;padding:3px 10px;border-radius:10px;font-size:0.65rem;font-weight:600;margin-bottom:8px;">⭐ 4.6 / Grand Bazaar</div>
+        <div class="restaurant-name">Dirt Dog - The Strip</div>
+        <div class="restaurant-type">ホットドッグ｜Grand Bazaar Shops</div>
+        <div class="restaurant-note">ストリップ上で食べられる絶品ホットドッグ。ガーリックフライが激うま。散策中のランチに！</div>
+        <a href="https://maps.google.com/?q=Dirt+Dog+Grand+Bazaar+Shops+Las+Vegas" target="_blank" class="map-link">📍 Googleマップで見る</a>
+      </div>
+    </div>
+
+    <div class="restaurant-card">
+      <div class="restaurant-img">🍱</div>
+      <div class="restaurant-body">
+        <div style="display:inline-flex;align-items:center;gap:4px;background:#fff0e0;color:#c0601a;padding:3px 10px;border-radius:10px;font-size:0.65rem;font-weight:600;margin-bottom:8px;">⭐ 4.6 / Spring Mountain</div>
+        <div class="restaurant-name">Ichiza Original</div>
+        <div class="restaurant-type">居酒屋・日本食｜W Spring Mountain Rd</div>
+        <div class="restaurant-note">深夜まで営業の人気居酒屋。SNSで話題のハニートースト＆ピンクキャビアうどんは必食！</div>
+        <a href="https://maps.google.com/?q=Ichiza+Original+Las+Vegas" target="_blank" class="map-link">📍 Googleマップで見る</a>
+      </div>
+    </div>
+
+    <div class="restaurant-card">
+      <div class="restaurant-img">🧁</div>
+      <div class="restaurant-body">
+        <div style="display:inline-flex;align-items:center;gap:4px;background:#fff0e0;color:#c0601a;padding:3px 10px;border-radius:10px;font-size:0.65rem;font-weight:600;margin-bottom:8px;">⭐ 4.6 / Flamingo Rd</div>
+        <div class="restaurant-name">Purple Potato Bakery</div>
+        <div class="restaurant-type">ウベベーカリー｜W Flamingo Rd</div>
+        <div class="restaurant-note">ウベ（紫芋）スイーツ専門ベーカリー。ブリオッシュドーナツに3日連続で来た人が続出！</div>
+        <a href="https://maps.google.com/?q=Purple+Potato+Bakery+Las+Vegas" target="_blank" class="map-link">📍 Googleマップで見る</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- NICE RESTAURANTS -->
+<section id="nice-restaurants">
+  <div class="section-header">
+    <span class="section-tag">🍷 DINING</span>
+    <h2 class="section-title">ちょっといいレストラン８選</h2>
+    <p style="font-size:0.82rem; color:var(--text-light); margin-top:0.5rem;">5,000円以内・高評価・アメリカに来た！って感じのお店</p>
+  </div>
+
+  <div class="restaurant-grid">
+
+    <div class="restaurant-card">
+      <div class="restaurant-img" style="background:linear-gradient(135deg,#2c1654,#6b4fa0);">🥩</div>
+      <div class="restaurant-body">
+        <div style="display:inline-flex;align-items:center;gap:4px;background:#ede0ff;color:var(--purple-dark);padding:3px 10px;border-radius:10px;font-size:0.65rem;font-weight:600;margin-bottom:8px;">⭐ 4.7 / ステーキ＆カクテル</div>
+        <div class="restaurant-name">Herbs and Rye</div>
+        <div class="restaurant-type">ステーキハウス・カクテルバー｜W Sahara Ave</div>
+        <div class="restaurant-note">ラスベガスNo.1クラスのステーキとカクテル。1920年代の雰囲気が最高。ストリップを外れた地元の名店。要予約！</div>
+        <a href="https://maps.google.com/?q=Herbs+and+Rye+Las+Vegas" target="_blank" class="map-link">📍 Googleマップで見る</a>
+      </div>
+    </div>
+
+    <div class="restaurant-card">
+      <div class="restaurant-img" style="background:linear-gradient(135deg,#2c1654,#6b4fa0);">⛲</div>
+      <div class="restaurant-body">
+        <div style="display:inline-flex;align-items:center;gap:4px;background:#ede0ff;color:var(--purple-dark);padding:3px 10px;border-radius:10px;font-size:0.65rem;font-weight:600;margin-bottom:8px;">⭐ 4.7 / ベラッジオ噴水前</div>
+        <div class="restaurant-name">Mon Ami Gabi</div>
+        <div class="restaurant-type">フレンチビストロ｜Paris Las Vegas</div>
+        <div class="restaurant-note">ベラッジオ噴水を目の前に見ながらフランス料理が楽しめる！ブランチも人気。ロケーション最強のビストロ。</div>
+        <a href="https://maps.google.com/?q=Mon+Ami+Gabi+Paris+Las+Vegas" target="_blank" class="map-link">📍 Googleマップで見る</a>
+      </div>
+    </div>
+
+    <div class="restaurant-card">
+      <div class="restaurant-img" style="background:linear-gradient(135deg,#2c1654,#6b4fa0);">🍝</div>
+      <div class="restaurant-body">
+        <div style="display:inline-flex;align-items:center;gap:4px;background:#ede0ff;color:var(--purple-dark);padding:3px 10px;border-radius:10px;font-size:0.65rem;font-weight:600;margin-bottom:8px;">⭐ 4.8 / Bellagio エリア</div>
+        <div class="restaurant-name">RPM Italian Las Vegas</div>
+        <div class="restaurant-type">本格イタリアン｜Las Vegas Blvd</div>
+        <div class="restaurant-note">毎日手作りパスタが自慢のイタリアン。コスパ良くてクオリティ高い。ブルスケッタとカルボナーラが絶品。</div>
+        <a href="https://maps.google.com/?q=RPM+Italian+Las+Vegas" target="_blank" class="map-link">📍 Googleマップで見る</a>
+      </div>
+    </div>
+
+    <div class="restaurant-card">
+      <div class="restaurant-img" style="background:linear-gradient(135deg,#2c1654,#6b4fa0);">🍗</div>
+      <div class="restaurant-body">
+        <div style="display:inline-flex;align-items:center;gap:4px;background:#ede0ff;color:var(--purple-dark);padding:3px 10px;border-radius:10px;font-size:0.65rem;font-weight:600;margin-bottom:8px;">⭐ 4.5 / The Venetian</div>
+        <div class="restaurant-name">Yardbird Table & Bar</div>
+        <div class="restaurant-type">サザン・アメリカン｜The Venetian</div>
+        <div class="restaurant-note">チキン＆ワッフルが名物のアメリカンレストラン。南部料理の濃厚な味わい。アメリカらしい食事がしたい人にぴったり！</div>
+        <a href="https://maps.google.com/?q=Yardbird+Las+Vegas+Venetian" target="_blank" class="map-link">📍 Googleマップで見る</a>
+      </div>
+    </div>
+
+    <div class="restaurant-card">
+      <div class="restaurant-img" style="background:linear-gradient(135deg,#2c1654,#6b4fa0);">🌙</div>
+      <div class="restaurant-body">
+        <div style="display:inline-flex;align-items:center;gap:4px;background:#ede0ff;color:var(--purple-dark);padding:3px 10px;border-radius:10px;font-size:0.65rem;font-weight:600;margin-bottom:8px;">⭐ 4.5 / Las Vegas Blvd</div>
+        <div class="restaurant-name">Peppermill Restaurant</div>
+        <div class="restaurant-type">アメリカンダイナー・レトロ｜Las Vegas Blvd</div>
+        <div class="restaurant-note">ネオンサインが輝くオールドベガスの名店。リブアイステーキとオニオンリングが最高。ポーションが超巨大！</div>
+        <a href="https://maps.google.com/?q=Peppermill+Restaurant+Las+Vegas" target="_blank" class="map-link">📍 Googleマップで見る</a>
+      </div>
+    </div>
+
+    <div class="restaurant-card">
+      <div class="restaurant-img" style="background:linear-gradient(135deg,#2c1654,#6b4fa0);">🍝</div>
+      <div class="restaurant-body">
+        <div style="display:inline-flex;align-items:center;gap:4px;background:#ede0ff;color:var(--purple-dark);padding:3px 10px;border-radius:10px;font-size:0.65rem;font-weight:600;margin-bottom:8px;">⭐ 4.5 / ストリップ脇の名店</div>
+        <div class="restaurant-name">Battista's Hole in the Wall</div>
+        <div class="restaurant-type">イタリアン・老舗｜Linq Ln（ストリップ脇）</div>
+        <div class="restaurant-note">ベガスの老舗イタリアン。ディナーにハウスワイン付き！ガーリックブレッドとパスタが絶品。雰囲気も最高。</div>
+        <a href="https://maps.google.com/?q=Battistas+Hole+in+the+Wall+Las+Vegas" target="_blank" class="map-link">📍 Googleマップで見る</a>
+      </div>
+    </div>
+
+    <div class="restaurant-card">
+      <div class="restaurant-img" style="background:linear-gradient(135deg,#2c1654,#6b4fa0);">🌶</div>
+      <div class="restaurant-body">
+        <div style="display:inline-flex;align-items:center;gap:4px;background:#ede0ff;color:var(--purple-dark);padding:3px 10px;border-radius:10px;font-size:0.65rem;font-weight:600;margin-bottom:8px;">⭐ 4.3 / E Flamingo Rd</div>
+        <div class="restaurant-name">Lotus of Siam</div>
+        <div class="restaurant-type">タイ料理・受賞歴あり｜E Flamingo Rd</div>
+        <div class="restaurant-note">ニューヨーク・タイムズ紙がアメリカ最高のタイ料理店と絶賛。カオソーイとトムカーが絶品。本場以上の味。</div>
+        <a href="https://maps.google.com/?q=Lotus+of+Siam+Las+Vegas+Flamingo" target="_blank" class="map-link">📍 Googleマップで見る</a>
+      </div>
+    </div>
+
+    <div class="restaurant-card">
+      <div class="restaurant-img" style="background:linear-gradient(135deg,#2c1654,#6b4fa0);">🥩</div>
+      <div class="restaurant-body">
+        <div style="display:inline-flex;align-items:center;gap:4px;background:#ede0ff;color:var(--purple-dark);padding:3px 10px;border-radius:10px;font-size:0.65rem;font-weight:600;margin-bottom:8px;">⭐ 4.6 / Rampart Blvd</div>
+        <div class="restaurant-name">Echo & Rig Steakhouse</div>
+        <div class="restaurant-type">ステーキ・精肉店直営｜Tivoli Village</div>
+        <div class="restaurant-note">直営精肉店のステーキハウス。素材の鮮度が抜群でコスパも優秀。バーガーやポテトフライも人気！</div>
+        <a href="https://maps.google.com/?q=Echo+and+Rig+Steakhouse+Las+Vegas" target="_blank" class="map-link">📍 Googleマップで見る</a>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -2251,63 +2537,87 @@
   <div class="sightseeing-grid">
     <div class="sight-card" style="border:2px solid var(--purple-dark);">
       <span class="sight-emoji">🌐</span>
-      <div class="sight-name" style="color:var(--purple-dark);">Sphere（スフィア）</div>
-      <div class="sight-desc">世界最大の球体シアター！圧巻の没入体験。5/29予定。<br><a href="https://maps.google.com/?q=Sphere+Las+Vegas" target="_blank" style="color:var(--purple);font-size:0.72rem;">📍 マップ</a></div>
+      <div class="sight-info">
+        <div class="sight-name" style="color:var(--purple-dark);">Sphere（スフィア）</div>
+        <div class="sight-desc">世界最大の球体シアター！5/29予定。<a href="https://maps.google.com/?q=Sphere+Las+Vegas" target="_blank" style="color:var(--purple);"> 📍マップ</a></div>
+      </div>
     </div>
     <div class="sight-card" style="border:2px solid #c0392b;">
       <span class="sight-emoji">🏆</span>
-      <div class="sight-name" style="color:#c0392b;">AMAs 2026・MGMグランド</div>
-      <div class="sight-desc">5/25 American Music Awards！BTSの出待ち予定！<br><a href="https://maps.google.com/?q=MGM+Grand+Garden+Arena+Las+Vegas" target="_blank" style="color:#c0392b;font-size:0.72rem;">📍 マップ</a></div>
+      <div class="sight-info">
+        <div class="sight-name" style="color:#c0392b;">AMAs 2026・MGMグランド</div>
+        <div class="sight-desc">5/25 BTS出待ち予定！<a href="https://maps.google.com/?q=MGM+Grand+Garden+Arena+Las+Vegas" target="_blank" style="color:#c0392b;"> 📍マップ</a></div>
+      </div>
     </div>
     <div class="sight-card" style="border:2px solid #d4af6a;">
       <span class="sight-emoji">🏜</span>
-      <div class="sight-name" style="color:#8b6914;">グランドキャニオン</div>
-      <div class="sight-desc">5/26 日帰り！ラスベガスから約4時間。絶景の大峡谷。<br><a href="https://maps.google.com/?q=Grand+Canyon+South+Rim" target="_blank" style="color:#8b6914;font-size:0.72rem;">📍 マップ</a></div>
+      <div class="sight-info">
+        <div class="sight-name" style="color:#8b6914;">グランドキャニオン</div>
+        <div class="sight-desc">5/26 日帰り！絶景の大峡谷。<a href="https://maps.google.com/?q=Grand+Canyon+South+Rim" target="_blank" style="color:#8b6914;"> 📍マップ</a></div>
+      </div>
     </div>
     <div class="sight-card">
       <span class="sight-emoji">🎰</span>
-      <div class="sight-name">ラスベガス・ストリップ</div>
-      <div class="sight-desc">世界一有名なカジノ通り。夜のネオンは絶対見るべき！<br><a href="https://maps.google.com/?q=Las+Vegas+Strip" target="_blank" style="color:var(--purple);font-size:0.72rem;">📍 マップ</a></div>
+      <div class="sight-info">
+        <div class="sight-name">ラスベガス・ストリップ</div>
+        <div class="sight-desc">世界一のカジノ通り。夜のネオンは必見！<a href="https://maps.google.com/?q=Las+Vegas+Strip" target="_blank" style="color:var(--purple);"> 📍マップ</a></div>
+      </div>
     </div>
     <div class="sight-card">
       <span class="sight-emoji">⛲</span>
-      <div class="sight-name">ベラッジオの噴水</div>
-      <div class="sight-desc">音楽に合わせて舞う噴水ショー。3人で記念写真！無料。<br><a href="https://maps.google.com/?q=Bellagio+Fountains+Las+Vegas" target="_blank" style="color:var(--purple);font-size:0.72rem;">📍 マップ</a></div>
+      <div class="sight-info">
+        <div class="sight-name">ベラッジオの噴水</div>
+        <div class="sight-desc">噴水ショー。3人で記念写真！無料。<a href="https://maps.google.com/?q=Bellagio+Fountains+Las+Vegas" target="_blank" style="color:var(--purple);"> 📍マップ</a></div>
+      </div>
     </div>
     <div class="sight-card">
       <span class="sight-emoji">💜</span>
-      <div class="sight-name">ウィン・ラスベガス（聖地）</div>
-      <div class="sight-desc">BTS前回滞在ホテル！ロビー・庭園を見学。聖地巡礼！<br><a href="https://maps.google.com/?q=Wynn+Las+Vegas" target="_blank" style="color:var(--purple);font-size:0.72rem;">📍 マップ</a></div>
+      <div class="sight-info">
+        <div class="sight-name">ウィン・ラスベガス（聖地）</div>
+        <div class="sight-desc">BTS前回滞在ホテル！聖地巡礼！<a href="https://maps.google.com/?q=Wynn+Las+Vegas" target="_blank" style="color:var(--purple);"> 📍マップ</a></div>
+      </div>
     </div>
     <div class="sight-card">
       <span class="sight-emoji">🗼</span>
-      <div class="sight-name">エッフェル塔 展望台</div>
-      <div class="sight-desc">パリスホテルの半分サイズのエッフェル塔。夜景が最高！<br><a href="https://maps.google.com/?q=Eiffel+Tower+Paris+Las+Vegas" target="_blank" style="color:var(--purple);font-size:0.72rem;">📍 マップ</a></div>
+      <div class="sight-info">
+        <div class="sight-name">エッフェル塔 展望台</div>
+        <div class="sight-desc">パリスホテルの半分サイズ。夜景最高！<a href="https://maps.google.com/?q=Eiffel+Tower+Paris+Las+Vegas" target="_blank" style="color:var(--purple);"> 📍マップ</a></div>
+      </div>
     </div>
     <div class="sight-card">
       <span class="sight-emoji">🌸</span>
-      <div class="sight-name">ベラッジオ植物園</div>
-      <div class="sight-desc">季節の花で飾られた豪華な植物園。写真映え抜群で無料！<br><a href="https://maps.google.com/?q=Bellagio+Conservatory+Las+Vegas" target="_blank" style="color:var(--purple);font-size:0.72rem;">📍 マップ</a></div>
+      <div class="sight-info">
+        <div class="sight-name">ベラッジオ植物園</div>
+        <div class="sight-desc">季節の花の豪華な植物園。写真映え・無料！<a href="https://maps.google.com/?q=Bellagio+Conservatory+Las+Vegas" target="_blank" style="color:var(--purple);"> 📍マップ</a></div>
+      </div>
     </div>
     <div class="sight-card">
       <span class="sight-emoji">🏟</span>
-      <div class="sight-name">Allegiant Stadium</div>
-      <div class="sight-desc">BTSコンサート会場！外観フォトスポットも最高。<br><a href="https://maps.google.com/?q=Allegiant+Stadium+Las+Vegas" target="_blank" style="color:var(--purple);font-size:0.72rem;">📍 マップ</a></div>
+      <div class="sight-info">
+        <div class="sight-name">Allegiant Stadium</div>
+        <div class="sight-desc">BTSコンサート会場！外観フォトスポットも。<a href="https://maps.google.com/?q=Allegiant+Stadium+Las+Vegas" target="_blank" style="color:var(--purple);"> 📍マップ</a></div>
+      </div>
     </div>
     <div class="sight-card">
       <span class="sight-emoji">🎡</span>
-      <div class="sight-name">ハイローラー観覧車</div>
-      <div class="sight-desc">世界最大級の観覧車。ラスベガスを一望できる。<br><a href="https://maps.google.com/?q=High+Roller+Las+Vegas" target="_blank" style="color:var(--purple);font-size:0.72rem;">📍 マップ</a></div>
+      <div class="sight-info">
+        <div class="sight-name">ハイローラー観覧車</div>
+        <div class="sight-desc">世界最大級の観覧車。ラスベガスを一望。<a href="https://maps.google.com/?q=High+Roller+Las+Vegas" target="_blank" style="color:var(--purple);"> 📍マップ</a></div>
+      </div>
     </div>
     <div class="sight-card">
       <span class="sight-emoji">🌃</span>
-      <div class="sight-name">フリーモント・ストリート</div>
-      <div class="sight-desc">巨大LEDスクリーンの天井が広がる旧市街アーケード。<br><a href="https://maps.google.com/?q=Fremont+Street+Las+Vegas" target="_blank" style="color:var(--purple);font-size:0.72rem;">📍 マップ</a></div>
+      <div class="sight-info">
+        <div class="sight-name">フリーモント・ストリート</div>
+        <div class="sight-desc">巨大LEDスクリーン天井の旧市街アーケード。<a href="https://maps.google.com/?q=Fremont+Street+Las+Vegas" target="_blank" style="color:var(--purple);"> 📍マップ</a></div>
+      </div>
     </div>
     <div class="sight-card">
       <span class="sight-emoji">🛍</span>
-      <div class="sight-name">フォーラムショップス</div>
-      <div class="sight-desc">シーザーズパレス内の巨大ショッピングモール。お土産に！<br><a href="https://maps.google.com/?q=Forum+Shops+Caesars+Palace+Las+Vegas" target="_blank" style="color:var(--purple);font-size:0.72rem;">📍 マップ</a></div>
+      <div class="sight-info">
+        <div class="sight-name">フォーラムショップス</div>
+        <div class="sight-desc">シーザーズパレス内の巨大ショッピングモール。<a href="https://maps.google.com/?q=Forum+Shops+Caesars+Palace+Las+Vegas" target="_blank" style="color:var(--purple);"> 📍マップ</a></div>
+      </div>
     </div>
   </div>
 </section>
@@ -2402,6 +2712,7 @@
             <th>カテゴリ</th>
             <th>金額</th>
             <th>メモ</th>
+            <th></th>
           </tr>
         </thead>
         <tbody id="expenseTableBody">
@@ -2555,7 +2866,7 @@
   <div class="map-container">
     <iframe
       class="map-iframe"
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52523.72048929!2d-115.21!3d36.12!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80beb782a4f57dd1%3A0x3accd5e6d5b379a3!2sLas%20Vegas%2C%20NV%2C%20USA!5e0!3m2!1sja!2sjp!4v1680000000000!5m2!1sja!2sjp"
+      src="https://www.google.com/maps/d/embed?mid=1ZD0lsPF9uxKoQ-mbHBzUdKvLHy59VlM&usp=sharing"
       allowfullscreen="" loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"
     ></iframe>
@@ -2682,6 +2993,14 @@
     <span class="section-tag">👗 OUTFIT</span>
     <h2 class="section-title">コーデ計画</h2>
   </div>
+  <div style="margin-bottom:1.5rem; background:var(--lavender-pale); border-radius:14px; padding:1rem 1.25rem; border:1px solid var(--border); display:flex; align-items:center; gap:0.75rem; flex-wrap:wrap;">
+    <span style="font-size:1.3rem;">🌤</span>
+    <div>
+      <div style="font-size:0.78rem; font-weight:700; color:var(--purple-dark);">ラスベガス天気予報をチェック</div>
+      <div style="font-size:0.73rem; color:var(--text-light); margin-top:2px;">コーデを決める前に現地天気を確認しよう</div>
+    </div>
+    <a href="https://weather.yahoo.co.jp/weather/world/US/72386/" target="_blank" style="margin-left:auto; background:var(--purple-dark); color:white; text-decoration:none; padding:8px 16px; border-radius:10px; font-size:0.78rem; font-weight:600; white-space:nowrap;">🌤 天気予報を見る →</a>
+  </div>
 
   <div class="outfit-grid">
     <div class="outfit-card">
@@ -2801,7 +3120,57 @@
 
 <div class="section-divider"></div>
 
-<!-- FOOTER -->
+<!-- WEATHER -->
+<section id="weather">
+  <div class="section-header">
+    <span class="section-tag">🌤 WEATHER</span>
+    <h2 class="section-title">ラスベガスの天気予報</h2>
+  </div>
+  <div class="card" style="text-align:center; padding:2rem;">
+    <div style="font-size:3rem; margin-bottom:0.75rem;">🌞</div>
+    <p style="font-size:0.9rem; color:var(--text-mid); margin-bottom:1.5rem;">5月のラスベガスは最高気温40℃近くになることも。<br>コーデや持ち物の参考に、出発前に必ずチェック！</p>
+    <a href="https://weather.yahoo.co.jp/weather/world/US/72386/" target="_blank" style="display:inline-flex; align-items:center; gap:8px; background:linear-gradient(135deg,var(--purple-dark),var(--purple)); color:white; text-decoration:none; padding:12px 28px; border-radius:14px; font-size:0.9rem; font-weight:700; letter-spacing:0.05em; box-shadow:0 4px 12px rgba(107,79,160,0.3);">
+      🌤 Yahoo!天気 ラスベガス予報を見る →
+    </a>
+    <p style="font-size:0.72rem; color:var(--text-light); margin-top:1rem;">Yahoo! JAPAN 天気・災害 提供</p>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- LINKS -->
+<section id="links">
+  <div class="section-header">
+    <span class="section-tag">🔗 LINKS</span>
+    <h2 class="section-title">チケット購入リンク</h2>
+  </div>
+  <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1.5rem;">
+    <a href="https://www.ticketmaster.com/bts-tickets/artist/2110227" target="_blank" style="text-decoration:none;">
+      <div class="card" style="display:flex; align-items:center; gap:1.25rem; transition:all 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">
+        <div style="width:52px; height:52px; background:linear-gradient(135deg,#026CDF,#0049A3); border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:1.6rem; flex-shrink:0;">🎟</div>
+        <div>
+          <div style="font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--purple); font-weight:600; margin-bottom:3px;">OFFICIAL</div>
+          <div style="font-size:1.05rem; font-weight:700; color:var(--text-dark);">Ticketmaster</div>
+          <div style="font-size:0.75rem; color:var(--text-light); margin-top:2px;">BTS公式チケット購入サイト</div>
+        </div>
+        <div style="margin-left:auto; color:var(--purple-dark); font-size:1.2rem;">→</div>
+      </div>
+    </a>
+    <a href="https://www.stubhub.com/jp/bts-tickets/performer/1503185?agqi=c4dca641-ea4c-4549-9082-98c3c788ff93&agi=stubhub&agut=b85dbd85-e0b3-431e-9997-f621294dc2e7" target="_blank" style="text-decoration:none;">
+      <div class="card" style="display:flex; align-items:center; gap:1.25rem; transition:all 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">
+        <div style="width:52px; height:52px; background:linear-gradient(135deg,#E8451C,#C0391A); border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:1.6rem; flex-shrink:0;">🎫</div>
+        <div>
+          <div style="font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--purple); font-weight:600; margin-bottom:3px;">RESALE</div>
+          <div style="font-size:1.05rem; font-weight:700; color:var(--text-dark);">StubHub</div>
+          <div style="font-size:0.75rem; color:var(--text-light); margin-top:2px;">チケット転売・再販マーケット（日本語対応）</div>
+        </div>
+        <div style="margin-left:auto; color:var(--purple-dark); font-size:1.2rem;">→</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<div class="section-divider"></div>
 <footer>
   <div class="footer-logo">BTS LAS VEGAS TOUR 2026 💜</div>
   <p>かなこ・りか・えり 3人旅のしおり</p>
@@ -3000,12 +3369,19 @@ function addJpyToExpense() {
   document.getElementById('expAmount').focus();
 }
 
+function deleteExpense(index) {
+  if (!confirm('この支出を削除しますか？')) return;
+  expenses.splice(index, 1);
+  localStorage.setItem('expenses', JSON.stringify(expenses));
+  renderExpenses();
+}
+
 function renderExpenses() {
   const tbody = document.getElementById('expenseTableBody');
   const totalEl = document.getElementById('totalAmount');
 
   if (!expenses.length) {
-    tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; color:var(--text-light); padding: 2rem;">まだ支出がありません。追加してください 💜</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="5" style="text-align:center; color:var(--text-light); padding: 2rem;">まだ支出がありません。追加してください 💜</td></tr>';
     totalEl.textContent = '¥0';
     return;
   }
@@ -3019,6 +3395,7 @@ function renderExpenses() {
       <td style="font-size:0.78rem;">${e.category}</td>
       <td style="font-weight:600; color:var(--purple-dark);">¥${e.amount.toLocaleString()}</td>
       <td style="font-size:0.78rem; color:var(--text-light);">${e.memo}</td>
+      <td><button onclick="deleteExpense(${i})" style="background:none;border:none;cursor:pointer;color:#c04040;font-size:0.75rem;padding:2px 6px;border-radius:6px;background:#ffe8e8;" title="削除">🗑 削除</button></td>
     </tr>`;
   }).join('');
 

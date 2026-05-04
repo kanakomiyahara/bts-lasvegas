@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BTS LAS VEGAS TOUR 2026 💜 しおり</title>
+<title>小野寺家 BTS ラスベガス 旅のしおり</title>
+<meta property="og:title" content="小野寺家 BTS ラスベガス 旅のしおり">
+<meta property="og:description" content="2026年5月 BTS at Allegiant Stadium 💜 ラスベガス旅のしおり">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
@@ -745,54 +747,58 @@
   /* ───────────── RESTAURANTS ───────────── */
   .restaurant-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 0.75rem;
   }
 
   .restaurant-card {
     background: white;
-    border-radius: 20px;
+    border-radius: 14px;
     border: 1px solid var(--border);
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: all 0.3s;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
   }
 
   .restaurant-card:hover {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
     box-shadow: var(--shadow-hover);
   }
 
   .restaurant-img {
-    height: 120px;
+    width: 52px;
+    min-width: 52px;
     background: linear-gradient(135deg, var(--lavender-light), var(--lavender-pale));
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 3rem;
+    font-size: 1.5rem;
   }
 
-  .restaurant-body { padding: 1.25rem; }
+  .restaurant-body { padding: 0.75rem 1rem; flex: 1; }
 
   .restaurant-name {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 700;
     color: var(--text-dark);
-    margin-bottom: 4px;
+    margin-bottom: 2px;
   }
 
   .restaurant-type {
-    font-size: 0.72rem;
+    font-size: 0.68rem;
     color: var(--text-light);
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.4rem;
   }
 
   .restaurant-note {
-    font-size: 0.78rem;
+    font-size: 0.72rem;
     color: var(--purple-dark);
     background: var(--lavender-pale);
-    padding: 8px 12px;
-    border-radius: 10px;
+    padding: 5px 10px;
+    border-radius: 8px;
     line-height: 1.5;
   }
 
@@ -802,11 +808,11 @@
     gap: 4px;
     background: linear-gradient(135deg, var(--purple-dark), var(--purple));
     color: white;
-    padding: 3px 10px;
-    border-radius: 10px;
-    font-size: 0.65rem;
+    padding: 2px 8px;
+    border-radius: 8px;
+    font-size: 0.62rem;
     font-weight: 600;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
   }
 
   /* ───────────── SIGHTSEEING ───────────── */
@@ -1459,14 +1465,14 @@
       <li><a href="#flight" onclick="scrollTo('flight')">フライト</a></li>
       <li><a href="#concert" onclick="scrollTo('concert')">コンサート</a></li>
       <li><a href="#packing" onclick="scrollTo('packing')">持ち物</a></li>
-      <li><a href="#todo" onclick="scrollTo('todo')">やること</a></li>
+
       <li><a href="#restaurants" onclick="scrollTo('restaurants')">聖地</a></li>
       <li><a href="#sightseeing" onclick="scrollTo('sightseeing')">観光</a></li>
       <li><a href="#currency" onclick="scrollTo('currency')">家計簿</a></li>
       <li><a href="#map" onclick="scrollTo('map')">マップ</a></li>
       <li><a href="#timezone" onclick="scrollTo('timezone')">時差</a></li>
       <li><a href="#trouble" onclick="scrollTo('trouble')">トラブル</a></li>
-      <li><a href="#outfit" onclick="scrollTo('outfit')">コーデ</a></li>
+
       <li><a href="#weather-link" onclick="scrollTo('weather-link')">天気</a></li>
       <li><a href="#useful-links" onclick="scrollTo('useful-links')">リンク</a></li>
     </ul>
@@ -2140,12 +2146,13 @@
       </div>
     </div>
     <div class="restaurant-card">
-      <div class="restaurant-img">☕</div>
+      <div class="restaurant-img">🍲</div>
       <div class="restaurant-body">
-        <div class="restaurant-name">Eggslut</div>
-        <div class="restaurant-type">カフェ・サンドイッチ｜The Cosmopolitan</div>
-        <div class="restaurant-note">LA発のおしゃれカフェ。インスタ映え抜群のエッグサンドは必食。ラスベガスでも大人気のスポット。</div>
-        <a href="https://maps.google.com/?q=Eggslut+Cosmopolitan+Las+Vegas" target="_blank" style="display:inline-flex;align-items:center;gap:4px;margin-top:10px;font-size:0.75rem;color:var(--purple-dark);text-decoration:none;background:var(--lavender-light);padding:5px 12px;border-radius:10px;font-weight:600;">📍 Googleマップで見る</a>
+        <div class="bts-badge">💜 BTS 訪問・聖地</div>
+        <div class="restaurant-name">ホバク食堂</div>
+        <div class="restaurant-type">韓国料理｜Las Vegas</div>
+        <div class="restaurant-note">BTSメンバーが訪れたことで話題の韓国料理レストラン。本格的なホームスタイル韓国料理が楽しめる聖地！</div>
+        <a href="https://maps.app.goo.gl/u7s8D5AuQX1erem87" target="_blank" style="display:inline-flex;align-items:center;gap:4px;margin-top:10px;font-size:0.75rem;color:var(--purple-dark);text-decoration:none;background:var(--lavender-light);padding:5px 12px;border-radius:10px;font-weight:600;">📍 Googleマップで見る</a>
       </div>
     </div>
   </div>
@@ -2153,7 +2160,257 @@
 
 <div class="section-divider"></div>
 
-<!-- SIGHTSEEING -->
+<!-- BUDGET RESTAURANTS -->
+<section id="budget-restaurants">
+  <div class="section-header">
+    <span class="section-tag">🍽 BUDGET EATS</span>
+    <h2 class="section-title">ホテル近郊 コスパ◎レストラン</h2>
+    <p style="font-size:0.8rem; color:var(--text-light); margin-top:4px;">パームズカジノリゾート周辺 ／ Google ★4以上 ／ 1人3000円以内の目安</p>
+  </div>
+
+  <div class="restaurant-grid">
+
+    <div class="restaurant-card">
+      <div class="restaurant-img">🥟</div>
+      <div class="restaurant-body">
+        <div class="bts-badge" style="background:linear-gradient(135deg,#e8a020,#f0c040); color:#5a3a00;">⭐ Google 4.2</div>
+        <div class="restaurant-name">Ping Pang Pong</div>
+        <div class="restaurant-type">中華・飲茶｜Gold Coast Casino（ホテル隣）</div>
+        <div class="restaurant-note">Travel+Leisure誌「全米トップ10中華」に選出。飲茶は$3〜6/皿と激安。深夜3時まで営業なのも◎</div>
+        <a href="https://maps.google.com/?q=Ping+Pang+Pong+Gold+Coast+Las+Vegas" target="_blank" style="display:inline-flex;align-items:center;gap:4px;margin-top:10px;font-size:0.75rem;color:var(--purple-dark);text-decoration:none;background:var(--lavender-light);padding:5px 12px;border-radius:10px;font-weight:600;">📍 Googleマップで見る</a>
+      </div>
+    </div>
+
+    <div class="restaurant-card">
+      <div class="restaurant-img">🍜</div>
+      <div class="restaurant-body">
+        <div class="bts-badge" style="background:linear-gradient(135deg,#e8a020,#f0c040); color:#5a3a00;">⭐ Google 4.2</div>
+        <div class="restaurant-name">Send Noodles</div>
+        <div class="restaurant-type">アジア麺料理｜Palms Casino内（徒歩すぐ）</div>
+        <div class="restaurant-note">パームズ内のアジア系ヌードルバー。X.O.エビうどん・ハウスラーメンが人気。$15前後でボリューム満点。</div>
+        <a href="https://maps.google.com/?q=Send+Noodles+Palms+Casino+Las+Vegas" target="_blank" style="display:inline-flex;align-items:center;gap:4px;margin-top:10px;font-size:0.75rem;color:var(--purple-dark);text-decoration:none;background:var(--lavender-light);padding:5px 12px;border-radius:10px;font-weight:600;">📍 Googleマップで見る</a>
+      </div>
+    </div>
+
+    <div class="restaurant-card">
+      <div class="restaurant-img">🥪</div>
+      <div class="restaurant-body">
+        <div class="bts-badge" style="background:linear-gradient(135deg,#e8a020,#f0c040); color:#5a3a00;">⭐ Google 4.1</div>
+        <div class="restaurant-name">Earl of Sandwich</div>
+        <div class="restaurant-type">サンドイッチ｜Palms Casino フードコート内</div>
+        <div class="restaurant-note">焼きたてパンのホットサンドが$8〜10。軽くてコスパ抜群。コンサート前の腹ごしらえにも◎</div>
+        <a href="https://maps.google.com/?q=Earl+of+Sandwich+Palms+Casino+Las+Vegas" target="_blank" style="display:inline-flex;align-items:center;gap:4px;margin-top:10px;font-size:0.75rem;color:var(--purple-dark);text-decoration:none;background:var(--lavender-light);padding:5px 12px;border-radius:10px;font-weight:600;">📍 Googleマップで見る</a>
+      </div>
+    </div>
+
+    <div class="restaurant-card">
+      <div class="restaurant-img">🍕</div>
+      <div class="restaurant-body">
+        <div class="bts-badge" style="background:linear-gradient(135deg,#e8a020,#f0c040); color:#5a3a00;">⭐ Google 4.1</div>
+        <div class="restaurant-name">Palms Pizza</div>
+        <div class="restaurant-type">NYスタイルピザ｜Palms Casino内</div>
+        <div class="restaurant-note">NYスタイルの本格ピザをスライスで$7〜8から。ホテル内なのでサクッと食べたいときに最適。</div>
+        <a href="https://maps.google.com/?q=Palms+Pizza+Palms+Casino+Las+Vegas" target="_blank" style="display:inline-flex;align-items:center;gap:4px;margin-top:10px;font-size:0.75rem;color:var(--purple-dark);text-decoration:none;background:var(--lavender-light);padding:5px 12px;border-radius:10px;font-weight:600;">📍 Googleマップで見る</a>
+      </div>
+    </div>
+
+    <div class="restaurant-card">
+      <div class="restaurant-img">🍣</div>
+      <div class="restaurant-body">
+        <div class="bts-badge" style="background:linear-gradient(135deg,#e8a020,#f0c040); color:#5a3a00;">⭐ Google 4.3</div>
+        <div class="restaurant-name">Jinya Ramen Bar</div>
+        <div class="restaurant-type">ラーメン｜Palms周辺（車5分）</div>
+        <div class="restaurant-note">地元ラーメン好きも通う人気店。濃厚豚骨・鶏白湯が$15前後。ラスベガスのベストラーメンに常連。</div>
+        <a href="https://maps.google.com/?q=Jinya+Ramen+Bar+Las+Vegas" target="_blank" style="display:inline-flex;align-items:center;gap:4px;margin-top:10px;font-size:0.75rem;color:var(--purple-dark);text-decoration:none;background:var(--lavender-light);padding:5px 12px;border-radius:10px;font-weight:600;">📍 Googleマップで見る</a>
+      </div>
+    </div>
+
+    <div class="restaurant-card">
+      <div class="restaurant-img">🍔</div>
+      <div class="restaurant-body">
+        <div class="bts-badge" style="background:linear-gradient(135deg,#e8a020,#f0c040); color:#5a3a00;">⭐ Google 4.4</div>
+        <div class="restaurant-name">Serrano Vista Café</div>
+        <div class="restaurant-type">カフェ・アメリカン｜Palms Casino内</div>
+        <div class="restaurant-note">24時間営業のカジュアルダイナー。ハンバーガー・サラダ・朝食メニューが$12〜15。深夜帰りにも使える。</div>
+        <a href="https://maps.google.com/?q=Serrano+Vista+Cafe+Palms+Casino+Las+Vegas" target="_blank" style="display:inline-flex;align-items:center;gap:4px;margin-top:10px;font-size:0.75rem;color:var(--purple-dark);text-decoration:none;background:var(--lavender-light);padding:5px 12px;border-radius:10px;font-weight:600;">📍 Googleマップで見る</a>
+      </div>
+    </div>
+
+    <!-- 追加6店 / チャイナタウン（Spring Mountain Road）エリア -->
+    <div class="restaurant-card">
+      <div class="restaurant-img">🥟</div>
+      <div class="restaurant-body">
+        <div class="bts-badge" style="background:linear-gradient(135deg,#e8a020,#f0c040); color:#5a3a00;">⭐ Google 4.5</div>
+        <div class="restaurant-name">ShangHai Taste</div>
+        <div class="restaurant-type">上海料理・小籠包｜Spring Mountain Rd（車5分）</div>
+        <div class="restaurant-note">ガラス越しに職人が小籠包を包む姿が見える人気店。1日3,000個以上を販売。$12〜15でお腹いっぱい。</div>
+        <a href="https://maps.google.com/?q=ShangHai+Taste+Las+Vegas" target="_blank" style="display:inline-flex;align-items:center;gap:4px;margin-top:10px;font-size:0.75rem;color:var(--purple-dark);text-decoration:none;background:var(--lavender-light);padding:5px 12px;border-radius:10px;font-weight:600;">📍 Googleマップで見る</a>
+      </div>
+    </div>
+
+    <div class="restaurant-card">
+      <div class="restaurant-img">🍜</div>
+      <div class="restaurant-body">
+        <div class="bts-badge" style="background:linear-gradient(135deg,#e8a020,#f0c040); color:#5a3a00;">⭐ Google 4.4</div>
+        <div class="restaurant-name">Monta Ramen</div>
+        <div class="restaurant-type">東京風ラーメン｜Chinatown（車5分）</div>
+        <div class="restaurant-note">地元のラーメン好きが「ベガスNo.1」と絶賛する本格東京醤油ラーメン。$13〜16とリーズナブル。</div>
+        <a href="https://maps.google.com/?q=Monta+Ramen+Las+Vegas" target="_blank" style="display:inline-flex;align-items:center;gap:4px;margin-top:10px;font-size:0.75rem;color:var(--purple-dark);text-decoration:none;background:var(--lavender-light);padding:5px 12px;border-radius:10px;font-weight:600;">📍 Googleマップで見る</a>
+      </div>
+    </div>
+
+    <div class="restaurant-card">
+      <div class="restaurant-img">🍣</div>
+      <div class="restaurant-body">
+        <div class="bts-badge" style="background:linear-gradient(135deg,#e8a020,#f0c040); color:#5a3a00;">⭐ Google 4.4</div>
+        <div class="restaurant-name">China Mama</div>
+        <div class="restaurant-type">本格中華｜Spring Mountain Rd（車5分）</div>
+        <div class="restaurant-note">地元民に長年愛される老舗の本格中華。手打ち麺・水餃子が$10〜15と安くて旨い。行列覚悟の人気店。</div>
+        <a href="https://maps.google.com/?q=China+Mama+Las+Vegas" target="_blank" style="display:inline-flex;align-items:center;gap:4px;margin-top:10px;font-size:0.75rem;color:var(--purple-dark);text-decoration:none;background:var(--lavender-light);padding:5px 12px;border-radius:10px;font-weight:600;">📍 Googleマップで見る</a>
+      </div>
+    </div>
+
+    <div class="restaurant-card">
+      <div class="restaurant-img">🍔</div>
+      <div class="restaurant-body">
+        <div class="bts-badge" style="background:linear-gradient(135deg,#e8a020,#f0c040); color:#5a3a00;">⭐ Google 4.4</div>
+        <div class="restaurant-name">Fukuburger</div>
+        <div class="restaurant-type">和風バーガー｜Chinatown（車5分）</div>
+        <div class="restaurant-note">とがらし塩フライドポテト付きのユニークな和風バーガーが$12〜15。セットでもプチプラで満足感◎</div>
+        <a href="https://maps.google.com/?q=Fukuburger+Las+Vegas+Chinatown" target="_blank" style="display:inline-flex;align-items:center;gap:4px;margin-top:10px;font-size:0.75rem;color:var(--purple-dark);text-decoration:none;background:var(--lavender-light);padding:5px 12px;border-radius:10px;font-weight:600;">📍 Googleマップで見る</a>
+      </div>
+    </div>
+
+    <div class="restaurant-card">
+      <div class="restaurant-img">🫕</div>
+      <div class="restaurant-body">
+        <div class="bts-badge" style="background:linear-gradient(135deg,#e8a020,#f0c040); color:#5a3a00;">⭐ Google 4.3</div>
+        <div class="restaurant-name">Noodlehead</div>
+        <div class="restaurant-type">タイ麺料理｜Chinatown西側（車7分）</div>
+        <div class="restaurant-note">地元のシェフたちも通う本格タイ麺の名店。パッタイ・クイッティアオが$12〜15。こぢんまりした穴場感◎</div>
+        <a href="https://maps.google.com/?q=Noodlehead+Las+Vegas" target="_blank" style="display:inline-flex;align-items:center;gap:4px;margin-top:10px;font-size:0.75rem;color:var(--purple-dark);text-decoration:none;background:var(--lavender-light);padding:5px 12px;border-radius:10px;font-weight:600;">📍 Googleマップで見る</a>
+      </div>
+    </div>
+
+    <div class="restaurant-card">
+      <div class="restaurant-img">🍡</div>
+      <div class="restaurant-body">
+        <div class="bts-badge" style="background:linear-gradient(135deg,#e8a020,#f0c040); color:#5a3a00;">⭐ Google 4.3</div>
+        <div class="restaurant-name">Yo Mochi Cafe</div>
+        <div class="restaurant-type">もちアイス・カフェ｜Palms Casino内</div>
+        <div class="restaurant-note">パームズ内のもちアイス＆カフェ。コンサート前後のスイーツ休憩に最適。$8〜12でカラフルな映えスイーツ。</div>
+        <a href="https://maps.google.com/?q=Yo+Mochi+Cafe+Palms+Casino+Las+Vegas" target="_blank" style="display:inline-flex;align-items:center;gap:4px;margin-top:10px;font-size:0.75rem;color:var(--purple-dark);text-decoration:none;background:var(--lavender-light);padding:5px 12px;border-radius:10px;font-weight:600;">📍 Googleマップで見る</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- NICE RESTAURANTS -->
+<section id="nice-restaurants">
+  <div class="section-header">
+    <span class="section-tag">🥩 NICE EATS</span>
+    <h2 class="section-title">ちょっといいレストラン８選</h2>
+    <p style="font-size:0.8rem; color:var(--text-light); margin-top:4px;">Google ★4以上 ／ 1人5000円以内の目安 ／ アメリカ来たって感じる名店</p>
+  </div>
+
+  <div class="restaurant-grid">
+
+    <div class="restaurant-card">
+      <div class="restaurant-img">🥩</div>
+      <div class="restaurant-body">
+        <div class="bts-badge" style="background:linear-gradient(135deg,#2d6a2d,#4a9e4a); color:white;">⭐ Google 4.6</div>
+        <div class="restaurant-name">Herbs & Rye</div>
+        <div class="restaurant-type">ステーキ＆クラシックカクテル｜Palms周辺（車5分）</div>
+        <div class="restaurant-note">地元グルメが「ベガス最高のステーキ」と絶賛。$30〜35で本格ドライエイジドステーキ。カクテルも超絶品。予約推奨。</div>
+        <a href="https://maps.google.com/?q=Herbs+and+Rye+Las+Vegas" target="_blank" style="display:inline-flex;align-items:center;gap:4px;margin-top:10px;font-size:0.75rem;color:var(--purple-dark);text-decoration:none;background:var(--lavender-light);padding:5px 12px;border-radius:10px;font-weight:600;">📍 Googleマップで見る</a>
+      </div>
+    </div>
+
+    <div class="restaurant-card">
+      <div class="restaurant-img">🤠</div>
+      <div class="restaurant-body">
+        <div class="bts-badge" style="background:linear-gradient(135deg,#2d6a2d,#4a9e4a); color:white;">⭐ Google 4.5</div>
+        <div class="restaurant-name">Golden Steer Steakhouse</div>
+        <div class="restaurant-type">伝説のステーキハウス｜Strip北（車10分）</div>
+        <div class="restaurant-note">1958年創業。エルヴィス・シナトラも通った老舗。$35前後で本格USビーフ。ラスベガスの歴史を感じる空間。</div>
+        <a href="https://maps.google.com/?q=Golden+Steer+Steakhouse+Las+Vegas" target="_blank" style="display:inline-flex;align-items:center;gap:4px;margin-top:10px;font-size:0.75rem;color:var(--purple-dark);text-decoration:none;background:var(--lavender-light);padding:5px 12px;border-radius:10px;font-weight:600;">📍 Googleマップで見る</a>
+      </div>
+    </div>
+
+    <div class="restaurant-card">
+      <div class="restaurant-img">🍺</div>
+      <div class="restaurant-body">
+        <div class="bts-badge" style="background:linear-gradient(135deg,#2d6a2d,#4a9e4a); color:white;">⭐ Google 4.4</div>
+        <div class="restaurant-name">Hofbräuhaus Las Vegas</div>
+        <div class="restaurant-type">ドイツビール&amp;料理｜Strip東（車10分）</div>
+        <div class="restaurant-note">ミュンヘン直送のビールで毎日がオクトーバーフェスト！ソーセージ・プレッツェルが$20〜30。陽気な雰囲気で大盛り上がり。</div>
+        <a href="https://maps.google.com/?q=Hofbrauhaus+Las+Vegas" target="_blank" style="display:inline-flex;align-items:center;gap:4px;margin-top:10px;font-size:0.75rem;color:var(--purple-dark);text-decoration:none;background:var(--lavender-light);padding:5px 12px;border-radius:10px;font-weight:600;">📍 Googleマップで見る</a>
+      </div>
+    </div>
+
+    <div class="restaurant-card">
+      <div class="restaurant-img">🍖</div>
+      <div class="restaurant-body">
+        <div class="bts-badge" style="background:linear-gradient(135deg,#2d6a2d,#4a9e4a); color:white;">⭐ Google 4.5</div>
+        <div class="restaurant-name">Bavette's Steakhouse & Bar</div>
+        <div class="restaurant-type">ムードたっぷりステーキ｜Park MGM（車15分）</div>
+        <div class="restaurant-note">シカゴ発。暗めのジャズバー風空間でこだわりステーキ。$30〜35。ちょっとオシャレなディナーにぴったり。</div>
+        <a href="https://maps.google.com/?q=Bavette's+Steakhouse+Park+MGM+Las+Vegas" target="_blank" style="display:inline-flex;align-items:center;gap:4px;margin-top:10px;font-size:0.75rem;color:var(--purple-dark);text-decoration:none;background:var(--lavender-light);padding:5px 12px;border-radius:10px;font-weight:600;">📍 Googleマップで見る</a>
+      </div>
+    </div>
+
+    <div class="restaurant-card">
+      <div class="restaurant-img">🦞</div>
+      <div class="restaurant-body">
+        <div class="bts-badge" style="background:linear-gradient(135deg,#2d6a2d,#4a9e4a); color:white;">⭐ Google 4.4</div>
+        <div class="restaurant-name">In-N-Out Burger（アニマルスタイル）</div>
+        <div class="restaurant-type">西海岸の聖地バーガー｜LAS周辺・複数店舗</div>
+        <div class="restaurant-note">「アメリカに来た！」が一番感じられるファストフードの名店。必ず「アニマルスタイル」で注文。$10以内で大満足。</div>
+        <a href="https://maps.google.com/?q=In-N-Out+Burger+Las+Vegas" target="_blank" style="display:inline-flex;align-items:center;gap:4px;margin-top:10px;font-size:0.75rem;color:var(--purple-dark);text-decoration:none;background:var(--lavender-light);padding:5px 12px;border-radius:10px;font-weight:600;">📍 Googleマップで見る</a>
+      </div>
+    </div>
+
+    <div class="restaurant-card">
+      <div class="restaurant-img">🍗</div>
+      <div class="restaurant-body">
+        <div class="bts-badge" style="background:linear-gradient(135deg,#2d6a2d,#4a9e4a); color:white;">⭐ Google 4.5</div>
+        <div class="restaurant-name">Sparrow + Wolf</div>
+        <div class="restaurant-type">創作アメリカン｜Chinatown（車5分）</div>
+        <div class="restaurant-note">ラスベガスのダイニングシーンを変えた革命的レストラン。ユニークな料理が$25〜35。地元グルメ誌が毎年トップ評価。</div>
+        <a href="https://maps.google.com/?q=Sparrow+Wolf+Las+Vegas" target="_blank" style="display:inline-flex;align-items:center;gap:4px;margin-top:10px;font-size:0.75rem;color:var(--purple-dark);text-decoration:none;background:var(--lavender-light);padding:5px 12px;border-radius:10px;font-weight:600;">📍 Googleマップで見る</a>
+      </div>
+    </div>
+
+    <div class="restaurant-card">
+      <div class="restaurant-img">🦀</div>
+      <div class="restaurant-body">
+        <div class="bts-badge" style="background:linear-gradient(135deg,#2d6a2d,#4a9e4a); color:white;">⭐ Google 4.4</div>
+        <div class="restaurant-name">Gordon Ramsay Fish & Chips</div>
+        <div class="restaurant-type">フィッシュ&チップス｜The LINQ（車15分）</div>
+        <div class="restaurant-note">ゴードン・ラムゼイ監修の本格フィッシュ＆チップス。$20〜25でアメリカらしいボリューム感。カジュアルに楽しめる。</div>
+        <a href="https://maps.google.com/?q=Gordon+Ramsay+Fish+Chips+Las+Vegas+LINQ" target="_blank" style="display:inline-flex;align-items:center;gap:4px;margin-top:10px;font-size:0.75rem;color:var(--purple-dark);text-decoration:none;background:var(--lavender-light);padding:5px 12px;border-radius:10px;font-weight:600;">📍 Googleマップで見る</a>
+      </div>
+    </div>
+
+    <div class="restaurant-card">
+      <div class="restaurant-img">🥞</div>
+      <div class="restaurant-body">
+        <div class="bts-badge" style="background:linear-gradient(135deg,#2d6a2d,#4a9e4a); color:white;">⭐ Google 4.5</div>
+        <div class="restaurant-name">Hash House A Go Go</div>
+        <div class="restaurant-type">アメリカンダイナー・ブランチ｜Strip周辺（車15分）</div>
+        <div class="restaurant-note">「ツイステッドファームフード」が名物。巨大パンケーキ・チキン&ワッフルが$20〜25。一度は見ておきたいアメリカの食文化。</div>
+        <a href="https://maps.google.com/?q=Hash+House+A+Go+Go+Las+Vegas" target="_blank" style="display:inline-flex;align-items:center;gap:4px;margin-top:10px;font-size:0.75rem;color:var(--purple-dark);text-decoration:none;background:var(--lavender-light);padding:5px 12px;border-radius:10px;font-weight:600;">📍 Googleマップで見る</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
 <section id="sightseeing">
   <div class="section-header">
     <span class="section-tag">🌟 SIGHTSEEING</span>
